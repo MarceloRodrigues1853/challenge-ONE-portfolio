@@ -8,7 +8,7 @@
 
 Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qual recebemos a missão de dar vida ao nosso "Portfolio Pessoal" seguindo, preferencialmente, o modelo proposto no desafio, disponibilizado pelo Figma, para, assim, simularmos a rotina de um Desenvolvedor Web Front-End.
 
-# ![portifolio](https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio/assets/portifolio.jpeg)
+# 
 
 ## **Índice:**
 
