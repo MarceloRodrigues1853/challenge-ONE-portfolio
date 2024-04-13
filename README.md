@@ -25,7 +25,6 @@ Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qua
 
 ### **1. Implementações**
 
-[Challenge ONE Portifolio](https://challenge-one-portfolio-nine.vercel.app/)
 
 - Design responsivo para desktop, tablet e smartphone.
 - Validação do formulário de contato com exibição de "mensagem para preencher o campo solicitado", até que os campos sejam devidamente preenchidos.
@@ -44,15 +43,12 @@ Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qua
 
 ### **3. Como usar**
 
-
-
 Para acessar, clique aqui.
 
+[Challenge ONE Portifolio](https://challenge-one-portfolio-nine.vercel.app/)
 # 
 
 ### **4. Autor e contato**
-
-
 
 [![LinkedIn](https://camo.githubusercontent.com/591c02e8ff595d43e0b35b1b29aed639a7154b959cd8f8c854b9e176d885b094/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d3030373742353f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465)](https://www.linkedin.com/in/marcelo-rodigues-12724a1b7/)
 
