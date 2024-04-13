@@ -14,13 +14,12 @@ Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qua
 
 
 
-1. [Implementações](https://github.com//challenge-portifolio-one#1-Implementações)
-2. [Tecnologias utilizadas](https://github.com/douglaslourencoo/challenge-portifolio-one#2-linguagenstecnologias-utilizadas)
-3. [Como usar](https://github.com/douglaslourencoo/challenge-portifolio-one#3-como-usar)
-4. [Autor e contato](https://github.com/douglaslourencoo/challenge-portifolio-one#4-autor-e-contato)
-5. [Status do Projeto](https://github.com/douglaslourencoo/challenge-portifolio-one#5-status-do-projeto)
-6. [Crachá do Projeto](https://github.com/douglaslourencoo/challenge-portifolio-one#6-badge-conclusão-challenge)
-
+1. [Implementações]
+2. [Tecnologias utilizadas]
+3. [Como usar]
+4. [Autor e contato]
+5. [Status do Projeto]
+6. [Crachá do Projeto]
 # 
 
 ### **1. Implementações**
