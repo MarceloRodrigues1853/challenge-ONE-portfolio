@@ -14,24 +14,29 @@ Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qua
 
 
 
-1. [Implementações]
-2. [Tecnologias utilizadas]
-3. [Como usar]
-4. [Autor e contato]
-5. [Status do Projeto]
-6. [Crachá do Projeto]
+1. **Implementações**
+
+2. **Tecnologias utilizadas**
+
+3. **Como usar**
+
+4. **Autor e contato**
+
+5. **Status do Projeto**
+
+6. **Crachá do Projeto**
 # 
 
-### **1. Implementações**
+### **1. Implementações:**
 
 
-- Design responsivo para desktop, tablet e smartphone.
-- Validação do formulário de contato com exibição de "mensagem para preencher o campo solicitado", até que os campos sejam devidamente preenchidos.
+- _Design responsivo_ para **desktop**, **tablet** e **smartphone**.
+- _Validação do formulário_ de contato com exibição de "**mensagem para preencher o campo solicitado**", até que os campos sejam devidamente preenchidos.
 - Integração com serviço de terceiros para que a mensagem enviada pelo formulário de contato chegue ao meu e-mail e eu possa respondê-la.
 
 # 
 
-### **2. Linguagens/tecnologias utilizadas**
+### **2. Linguagens/tecnologias utilizadas:**
 
 
 
@@ -40,20 +45,20 @@ Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qua
 
 # 
 
-### **3. Como usar**
+### **3. Como usar:**
 
 Para acessar, clique aqui.
 
 [Challenge ONE Portifolio](https://challenge-one-portfolio-nine.vercel.app/)
 # 
 
-### **4. Autor e contato**
+### **4. Autor e contato:**
 
 [![LinkedIn](https://camo.githubusercontent.com/591c02e8ff595d43e0b35b1b29aed639a7154b959cd8f8c854b9e176d885b094/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d3030373742353f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465)](https://www.linkedin.com/in/marcelo-rodigues-12724a1b7/)
 
 # 
 
-### **5. Status do projeto**
+### **5. Status do projeto:**
 
 
 
