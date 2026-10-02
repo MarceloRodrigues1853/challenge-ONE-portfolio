@@ -1,75 +1,78 @@
-# **Portfólio Marcelo Rodrigues**
+# Portfólio Pessoal — Marcelo Rodrigues
 
+Projeto desenvolvido como parte do **Desafio Challenge Front-End** do programa **Oracle Next Education (ONE)** em parceria com a **Alura**, simulando a rotina e os padrões de entrega de um Desenvolvedor Web Front-End e Fullstack.
 
+---
 
-### **Projeto Challenge Portfolio Pessoal**
+## 🚀 Demonstração
 
+- **Publicação pendente:** a antiga URL `challenge-one-portfolio.vercel.app` exibe o portfólio de outra pessoa. Não usar como referência nem publicar nesse destino.
+- **Repositório GitHub:** [github.com/MarceloRodrigues1853/challenge-ONE-portfolio](https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio)
 
+---
 
-Desafio do Programa Oracle Next Education (ONE), em parceria com a Alura, no qual recebemos a missão de dar vida ao nosso "Portfolio Pessoal" seguindo, preferencialmente, o modelo proposto no desafio, disponibilizado pelo Figma, para, assim, simularmos a rotina de um Desenvolvedor Web Front-End.
+## ✨ Funcionalidades & Implementações
 
-# 
+### Marco 1 — experiência dev game (local)
 
-## **Índice:**
+- Identidade com painel de perfil e paleta azul original; alternância claro/escuro respeitando a preferência salva ou do sistema.
+- Mapa opcional de quatro fases, com progresso de navegação apenas durante a sessão.
+- Acesso direto a Projetos, Sobre, Formação e Contato, sem desbloqueios.
+- Foco visível, link para pular conteúdo, menu com Escape e respeito a movimento reduzido.
+- Conteúdo e navegação disponíveis sem JavaScript; preferências funcionam mesmo sem armazenamento.
+- Nenhuma dependência adicionada. A integração GitHub dinâmica fica para um próximo marco, com fallback local obrigatório.
 
+### Pendências de conteúdo e publicação
 
+- Formações e stack atualizadas com o LinkedIn e GitHub; oito selos do Credly com imagens oficiais, emissores, datas e links individuais.
+- Seis projetos selecionados com decisões documentadas, links de código e demos quando disponíveis. Os três projetos antigos continuam acessíveis.
+- Procedência e limites da verificação estão em [CONTENT_SOURCES.md](CONTENT_SOURCES.md).
+- Os registros antigos da cópia local continuam identificados como pendentes de confirmação.
+- Confirmar especialmente o ano 2024 do Santander Bootcamp 2023, a instituição Proz / AWS e o link antigo do LinkedIn usado no certificado.
+- Verificar nos repositórios as decisões técnicas e a completude dos projetos antes de atribuir selos ou destaques.
+- O versionamento local foi preparado na branch `portfolio-dev-game`, preservando os arquivos locais e o histórico de `origin/main`. O GitHub ainda não recebeu este marco.
+- O envio ao GitHub está pendente da verificação da integração com a Vercel: um push pode disparar publicação automática. Antes de qualquer publicação, identificar e corrigir a divergência entre os destinos.
+- Operações Git de escrita e deploy exigem autorização explícita. Regras completas em `AGENTS.md`.
 
-1. **Implementações**
+- **Design 100% Responsivo:** Adaptado com precisão para desktop, tablets e smartphones utilizando CSS Grid, Flexbox e unidades dinâmicas.
+- **Dark Mode & Light Mode:** Suporte a alternância de temas com persistência da preferência no `localStorage` e detecção automática do tema do sistema operacional (`prefers-color-scheme`).
+- **Validação em Tempo Real:** Validação nos campos de nome, e-mail, assunto e mensagem com feedback visual e mensagens acessíveis (`aria-live`).
+- **Contador Dinâmico de Caracteres:** Contador para o campo de mensagem (máximo 300 caracteres).
+- **Envio Real de Formulário:** Integração direta via AJAX com o FormSubmit para envio direto de mensagens para a caixa de e-mail, com estados de carregamento (*loading*) e confirmação de sucesso.
+- **Navegação Suave & Menu Mobile:** Navegação por âncoras fluida e menu hamburguer otimizado para dispositivos móveis.
+- **Acessibilidade:** Semântica HTML, foco visível, navegação por teclado e movimento reduzido; não representa uma auditoria completa de conformidade WCAG.
 
-2. **Tecnologias utilizadas**
+---
 
-3. **Como usar**
+## 🛠️ Tecnologias Utilizadas
 
-4. **Autor e contato**
+- **HTML5:** Estruturação semântica, metatags Open Graph para SEO e redes sociais.
+- **CSS3 Moderno:** Custom Properties (variáveis CSS), Flexbox, CSS Grid, animações e media queries.
+- **JavaScript (ES6+):** Manipulação de DOM assíncrona, Fetch API, eventos em tempo real e Web Storage API.
 
-5. **Status do Projeto**
+---
 
-6. **Crachá do Projeto**
-# 
+## 💻 Como Rodar o Projeto Localmente
 
-### **1. Implementações:**
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio.git
+   ```
 
+2. Acesse a pasta do projeto:
+   ```bash
+   cd challenge-ONE-portfolio
+   ```
 
-- _Design responsivo_ para **desktop**, **tablet** e **smartphone**.
-- _Validação do formulário_ de contato com exibição de "**mensagem para preencher o campo solicitado**", até que os campos sejam devidamente preenchidos.
-- Integração com serviço de terceiros para que a mensagem enviada pelo formulário de contato chegue ao meu e-mail e eu possa respondê-la.
+3. Abra o arquivo `index.html` no seu navegador ou utilize a extensão **Live Server** do VS Code:
+   - Clique com o botão direito em `index.html` > **Open with Live Server**.
 
-# 
+---
 
-### **2. Linguagens/tecnologias utilizadas:**
+## 👨‍💻 Autor
 
-
-
-
-[![HTML5](https://camo.githubusercontent.com/bfe6a48836e87b13a16f1f56f88fee428475c2ac29247992ec9b8bcc7154f881/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/bfe6a48836e87b13a16f1f56f88fee428475c2ac29247992ec9b8bcc7154f881/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f48544d4c352d4533344632363f7374796c653d666f722d7468652d6261646765266c6f676f3d68746d6c35266c6f676f436f6c6f723d7768697465) [![CSS3](https://camo.githubusercontent.com/472c222e8f240a48ae51cd9b082a1b857be809dcd851a25150890c2da50c13a5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465)](https://camo.githubusercontent.com/472c222e8f240a48ae51cd9b082a1b857be809dcd851a25150890c2da50c13a5/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f435353332d3135373242363f7374796c653d666f722d7468652d6261646765266c6f676f3d63737333266c6f676f436f6c6f723d7768697465) [![JavaScript](https://camo.githubusercontent.com/84372c7d2f1a7308844360ecad82d49b3f6cbc068a0c5e31aeea6ca5344b77ba/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d4637444631453f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b)](https://camo.githubusercontent.com/84372c7d2f1a7308844360ecad82d49b3f6cbc068a0c5e31aeea6ca5344b77ba/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d4637444631453f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b)
-
-# 
-
-### **3. Como usar:**
-
-Para acessar, clique aqui.
-
-[Challenge ONE Portifolio](https://challenge-one-portfolio-nine.vercel.app/)
-# 
-
-### **4. Autor e contato:**
-
-[![LinkedIn](https://camo.githubusercontent.com/591c02e8ff595d43e0b35b1b29aed639a7154b959cd8f8c854b9e176d885b094/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d3030373742353f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e266c6f676f436f6c6f723d7768697465)](https://www.linkedin.com/in/marcelo-rodigues-12724a1b7/)
-
-# 
-
-### **5. Status do projeto:**
-
-
-
--  Funcional.
--  Responsivo.
--  Concluído, sujeito a revisões.
-
-# 
-
-### **6. Crachá de conclusão de desafio**
-
-
-
-[![img](https://github.com/douglaslourencoo/challenge-portifolio-one/raw/master/assets/Site.png)](https://github.com/douglaslourencoo/challenge-portifolio-one/blob/master/assets/Site.png)
+- **Nome:** Marcelo Rodrigues
+- **GitHub:** [@MarceloRodrigues1853](https://github.com/MarceloRodrigues1853)
+- **LinkedIn:** [Marcelo Rodrigues](https://www.linkedin.com/in/marcelorodriguesdev1853/)
+- **Credly:** [Selos e certificações](https://www.credly.com/users/marcelo-rodrigues.26e8de27/badges/credly)
+- **Instagram:** [@marcelo180886](https://www.instagram.com/marcelo180886/)

@@ -1,165 +1,336 @@
-// Verifica se existem elementos de âncora na página
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-if (anchorLinks.length > 0) {
-  // Adiciona ouvinte de eventos para cada link de âncora
-  anchorLinks.forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      // Verifica se o link é interno
-      if (this.getAttribute("href").startsWith("#")) {
-        // Previne o comportamento padrão do link
-        e.preventDefault();
-        // Encontra o elemento de destino pelo ID
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        // Verifica se o elemento de destino existe
-        if (targetElement) {
-          // Configurações de animação de rolagem personalizáveis
-          const scrollOptions = {
-            behavior: "smooth",
-            block: "start", // Pode ser 'start', 'center', 'end', ou 'nearest'
-          };
-          // Rola suavemente para o elemento de destino
-          targetElement.scrollIntoView(scrollOptions);
-        }
+/**
+ * PORTFÓLIO MARCELO RODRIGUES - JAVASCRIPT MODERNO
+ * Funcionalidades: Validação em tempo real, Envio de Formulário, Dark Mode e Menu Mobile
+ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  // --------------------------------------------------------------------------
+  // 1. GERENCIAMENTO DE TEMA (DARK / LIGHT MODE)
+  // --------------------------------------------------------------------------
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const htmlElement = document.documentElement;
+
+  // Verifica preferência salva ou do sistema operacional
+  let savedTheme;
+  try {
+    savedTheme = localStorage.getItem("portfolio_theme");
+  } catch {
+    // Preferências são opcionais quando o armazenamento está indisponível.
+  }
+  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = ["light", "dark"].includes(savedTheme) ? savedTheme : (systemPrefersDark ? "dark" : "light");
+
+  function setTheme(theme) {
+    htmlElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("portfolio_theme", theme);
+    } catch {
+      // O tema continua funcionando durante esta visita.
+    }
+    if (themeIcon) {
+      themeIcon.textContent = theme === "dark" ? "☀️" : "🌙";
+      themeToggle.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Alternar para tema claro" : "Alternar para tema escuro"
+      );
+    }
+  }
+
+  // Aplica tema inicial
+  setTheme(initialTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = htmlElement.getAttribute("data-theme") || "light";
+      const newTheme = currentTheme === "dark" ? "light" : "dark";
+      setTheme(newTheme);
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 2. MENU MOBILE RESPONSIVO
+  // --------------------------------------------------------------------------
+  const mobileToggle = document.getElementById("mobileMenuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  if (mobileToggle && mainNav) {
+    document.documentElement.classList.add("nav-ready");
+    function closeMenu() {
+      mobileToggle.setAttribute("aria-expanded", "false");
+      mobileToggle.setAttribute("aria-label", "Abrir menu de navegação");
+      mobileToggle.classList.remove("active");
+      mainNav.classList.remove("active");
+      mainNav.inert = window.matchMedia("(max-width: 768px)").matches;
+    }
+    closeMenu();
+    mobileToggle.addEventListener("click", () => {
+      const isExpanded = mobileToggle.getAttribute("aria-expanded") === "true";
+      mobileToggle.setAttribute("aria-expanded", !isExpanded);
+      mobileToggle.classList.toggle("active");
+      mainNav.classList.toggle("active");
+      mainNav.inert = isExpanded;
+      mobileToggle.setAttribute("aria-label", isExpanded ? "Abrir menu de navegação" : "Fechar menu de navegação");
+      if (!isExpanded) mainNav.querySelector("a")?.focus();
+    });
+
+    // Fechar menu mobile ao clicar em qualquer link
+    const navLinks = mainNav.querySelectorAll(".nav__link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileToggle.getAttribute("aria-expanded") === "true") {
+        closeMenu();
+        mobileToggle.focus();
       }
     });
-  });
-}
+    window.matchMedia("(max-width: 768px)").addEventListener("change", closeMenu);
+  }
 
-// Função para validar o campo de nome
-function validateName() {
+  // Progresso apenas de navegação nesta sessão; nenhum conteúdo é bloqueado.
+  const phaseLinks = [...document.querySelectorAll("[data-phase]")];
+  const progress = document.getElementById("journeyProgress");
+  const visited = new Set();
+  if (progress) progress.hidden = false;
+  function updateJourney() {
+    const phase = window.location.hash.slice(1);
+    if (!phaseLinks.some((link) => link.dataset.phase === phase)) return;
+    visited.add(phase);
+    phaseLinks.forEach((link) => {
+      const isVisited = visited.has(link.dataset.phase);
+      link.classList.toggle("is-visited", isVisited);
+      link.querySelector(".phase-status").textContent = isVisited ? "Visitada nesta sessão" : "Visitar fase";
+      if (link.dataset.phase === phase) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    if (progress) progress.textContent = `${visited.size} de ${phaseLinks.length} fases visitadas nesta sessão.`;
+  }
+  window.addEventListener("hashchange", updateJourney);
+  updateJourney();
+
+  // --------------------------------------------------------------------------
+  // 3. VALIDAÇÃO E ENVIO DO FORMULÁRIO DE CONTATO
+  // --------------------------------------------------------------------------
+  const form = document.getElementById("contactForm");
   const nameInput = document.getElementById("name");
-  const nameError = document.getElementById("nameError");
-  const nameValue = nameInput.value.trim();
-
-  // Verifica se o campo está vazio
-  if (nameValue === "") {
-    nameError.textContent = "Por favor, insira seu nome.";
-    return false;
-  }
-
-  // Verifica se o nome ultrapassa o limite de caracteres
-  if (nameValue.length > 50) {
-    nameError.textContent = "O nome deve conter no máximo 50 caracteres.";
-    return false;
-  }
-
-  // Limpa a mensagem de erro se a validação for bem-sucedida
-  nameError.textContent = "";
-  return true;
-}
-
-// Função para validar o campo de e-mail
-function validateEmail() {
   const emailInput = document.getElementById("email");
-  const emailError = document.getElementById("emailError");
-  const emailValue = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expressão regular para validar o formato do e-mail
-
-  // Verifica se o campo está vazio
-  if (emailValue === "") {
-    emailError.textContent = "Por favor, insira seu e-mail.";
-    return false;
-  }
-
-  // Verifica se o e-mail está em um formato válido
-  if (!emailPattern.test(emailValue)) {
-    emailError.textContent = "Por favor, insira um e-mail válido.";
-    return false;
-  }
-
-  // Limpa a mensagem de erro se a validação for bem-sucedida
-  emailError.textContent = "";
-  return true;
-}
-
-// Função para validar o campo de mensagem
-function validateMessage() {
+  const subjectInput = document.getElementById("subject");
   const messageInput = document.getElementById("message");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const subjectError = document.getElementById("subjectError");
   const messageError = document.getElementById("messageError");
-  const messageValue = messageInput.value.trim();
 
-  // Verifica se o campo está vazio
-  if (messageValue === "") {
-    messageError.textContent = "Por favor, insira sua mensagem.";
-    return false;
-  }
-
-  // Verifica se a mensagem excede o limite de caracteres
-  const maxLength = 300;
-  if (messageValue.length > maxLength) {
-    messageError.textContent = `Sua mensagem deve ter no máximo ${maxLength} caracteres.`;
-    return false;
-  }
-
-  // Limpa a mensagem de erro se a validação for bem-sucedida
-  messageError.textContent = "";
-  return true;
-}
-
-// Função para validar o formulário
-function validateForm() {
-  // Chama as funções de validação dos campos individuais
-  const isNameValid = validateName();
-  const isEmailValid = validateEmail();
-  const isMessageValid = validateMessage();
-
-  // Obtém uma referência ao botão "Enviar"
+  const charCounter = document.getElementById("charCounter");
+  const formStatus = document.getElementById("formStatus");
   const submitButton = document.getElementById("submitButton");
+  const buttonText = document.getElementById("buttonText");
+  const buttonSpinner = document.getElementById("buttonSpinner");
 
-  // Verifica se todos os campos são válidos e habilita o botão "Enviar"
-  if (isNameValid && isEmailValid && isMessageValid) {
-    submitButton.disabled = false;
-  } else {
-    // Se algum campo não for válido, desabilita o botão "Enviar"
-    submitButton.disabled = true;
+  // Regex para formato válido de e-mail
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Validador de Nome
+  function validateName() {
+    if (!nameInput) return true;
+    const value = nameInput.value.trim();
+    if (value === "") {
+      showError(nameInput, nameError, "Por favor, informe seu nome.");
+      return false;
+    }
+    if (value.length > 50) {
+      showError(nameInput, nameError, "O nome deve ter no máximo 50 caracteres.");
+      return false;
+    }
+    clearError(nameInput, nameError);
+    return true;
   }
 
-  // Retorna true se todos os campos forem válidos
-  return isNameValid && isEmailValid && isMessageValid;
-}
+  // Validador de E-mail
+  function validateEmail() {
+    if (!emailInput) return true;
+    const value = emailInput.value.trim();
+    if (value === "") {
+      showError(emailInput, emailError, "Por favor, informe seu e-mail.");
+      return false;
+    }
+    if (!emailRegex.test(value)) {
+      showError(emailInput, emailError, "Por favor, insira um e-mail válido.");
+      return false;
+    }
+    clearError(emailInput, emailError);
+    return true;
+  }
 
-// Adiciona um evento de escuta ao formulário para submissão
-const form = document.getElementById("contactForm");
-form.addEventListener("submit", function (event) {
-  // Impede o comportamento padrão do formulário
-  event.preventDefault();
+  // Validador de Assunto
+  function validateSubject() {
+    if (!subjectInput) return true;
+    const value = subjectInput.value.trim();
+    if (value === "") {
+      showError(subjectInput, subjectError, "Por favor, informe o assunto.");
+      return false;
+    }
+    if (value.length > 50) {
+      showError(subjectInput, subjectError, "O assunto deve ter no máximo 50 caracteres.");
+      return false;
+    }
+    clearError(subjectInput, subjectError);
+    return true;
+  }
 
-  // Chama a função de validação do formulário
-  const isFormValid = validateForm();
+  // Validador de Mensagem & Contador de Caracteres
+  function validateMessage() {
+    if (!messageInput) return true;
+    const value = messageInput.value.trim();
+    const length = messageInput.value.length;
 
-  // Se o formulário for válido, envie os dados para o servidor
-  if (isFormValid) {
-    // Dados do formulário
-    const formData = new FormData(form);
+    if (charCounter) {
+      charCounter.textContent = `${length} / 300`;
+      charCounter.style.color = length > 300 ? "var(--color-error)" : "var(--color-text-muted)";
+    }
 
-    // URL do servidor para enviar os dados
-    const url = "https://example.com/submit-form";
+    if (value === "") {
+      showError(messageInput, messageError, "Por favor, escreva uma mensagem.");
+      return false;
+    }
+    if (value.length > 300) {
+      showError(messageInput, messageError, "A mensagem deve ter no máximo 300 caracteres.");
+      return false;
+    }
+    clearError(messageInput, messageError);
+    return true;
+  }
 
-    // Opções para a requisição fetch
-    const options = {
-      method: "POST",
-      body: formData,
-    };
+  function showError(input, errorElement, message) {
+    if (input) {
+      input.classList.add("is-invalid");
+      input.classList.remove("is-valid");
+    }
+    if (errorElement) {
+      errorElement.textContent = message;
+    }
+  }
 
-    // Enviar os dados do formulário para o servidor
-    fetch(url, options)
-      .then((response) => {
+  function clearError(input, errorElement) {
+    if (input) {
+      input.classList.remove("is-invalid");
+      input.classList.add("is-valid");
+    }
+    if (errorElement) {
+      errorElement.textContent = "";
+    }
+  }
+
+  // Ouvintes de eventos em tempo real (input e blur)
+  if (nameInput) {
+    nameInput.addEventListener("input", validateName);
+    nameInput.addEventListener("blur", validateName);
+  }
+
+  if (emailInput) {
+    emailInput.addEventListener("input", validateEmail);
+    emailInput.addEventListener("blur", validateEmail);
+  }
+
+  if (subjectInput) {
+    subjectInput.addEventListener("input", validateSubject);
+    subjectInput.addEventListener("blur", validateSubject);
+  }
+
+  if (messageInput) {
+    messageInput.addEventListener("input", validateMessage);
+    messageInput.addEventListener("blur", validateMessage);
+  }
+
+  // Envio assíncrono com feedback
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+      const isSubjectValid = validateSubject();
+      const isMessageValid = validateMessage();
+
+      if (!isNameValid || !isEmailValid || !isSubjectValid || !isMessageValid) {
+        showStatus("error", "Por favor, corrija os campos destacados antes de enviar.");
+        return;
+      }
+
+      // Estado de Carregamento
+      setLoading(true);
+
+      const payload = {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        subject: subjectInput.value.trim(),
+        message: messageInput.value.trim(),
+      };
+
+      try {
+        // Envio real integrado via FormSubmit AJAX (gratuito e sem backend)
+        const response = await fetch("https://formsubmit.co/ajax/marcelo180886@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
         if (response.ok) {
-          // Resposta recebida com sucesso
-          console.log("Formulário enviado com sucesso!");
-          // Você pode adicionar aqui código para lidar com a resposta do servidor, se necessário
+          showStatus("success", "Mensagem enviada com sucesso! Obrigado pelo contato.");
+          form.reset();
+          if (charCounter) charCounter.textContent = "0 / 300";
+          [nameInput, emailInput, subjectInput, messageInput].forEach((el) => {
+            el.classList.remove("is-valid");
+          });
         } else {
-          // Resposta do servidor não foi ok
-          console.error("Erro ao enviar formulário:", response.status);
-          // Você pode adicionar aqui código para lidar com erros de envio, se necessário
+          showStatus(
+            "error",
+            "Ocorreu um problema ao enviar a mensagem. Tente novamente mais tarde."
+          );
         }
-      })
-      .catch((error) => {
-        // Ocorreu um erro durante a requisição fetch
-        console.error("Erro ao enviar formulário:", error);
-        // Você pode adicionar aqui código para lidar com erros de rede, se necessário
-      });
+      } catch (err) {
+        console.error("Erro no envio:", err);
+        showStatus(
+          "error",
+          "Falha de conexão. Por favor, tente enviar novamente ou entre em contato pelo LinkedIn."
+        );
+      } finally {
+        setLoading(false);
+      }
+    });
   }
 
+  function setLoading(isLoading) {
+    if (!submitButton) return;
+    submitButton.disabled = isLoading;
+    if (buttonSpinner && buttonText) {
+      if (isLoading) {
+        buttonSpinner.style.display = "inline-block";
+        buttonText.textContent = "Enviando mensagem...";
+      } else {
+        buttonSpinner.style.display = "none";
+        buttonText.textContent = "Enviar Mensagem";
+      }
+    }
+  }
+
+  function showStatus(type, message) {
+    if (!formStatus) return;
+    formStatus.className = `form-status ${type}`;
+    formStatus.textContent = message;
+    formStatus.style.display = "block";
+
+    setTimeout(() => {
+      if (type === "success") {
+        formStatus.style.display = "none";
+      }
+    }, 6000);
+  }
 });

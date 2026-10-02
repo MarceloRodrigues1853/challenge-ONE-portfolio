@@ -1,512 +1,953 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Folha de estilo de CSS Linkado -->
-    <link rel="stylesheet" href="style.css" />
 
+    <title>Marcelo Rodrigues | Desenvolvedor Back-end Júnior</title>
+    <meta
+      name="description"
+
+      content="Portfólio de Marcelo Rodrigues, desenvolvedor Back-end Júnior e estudante de Ciência da Computação. Projetos em Go, Java e Node.js, formação e credenciais verificáveis."
+    />
+    <meta name="author" content="Marcelo Rodrigues" />
+    <meta name="theme-color" content="#2A7AE4" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Marcelo Rodrigues | Portfólio" />
+    <meta
+      property="og:description"
+      content="Conheça os projetos, certificações e habilidades de Marcelo Rodrigues em desenvolvimento de software."
+    />
+    <meta property="og:image" content="assets/foto_perfil_atualizada.jpeg" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Fonte do Projeto Raleway -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <script
-      src="https://kit.fontawesome.com.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Portfólio Pessoal</title>
+    <!-- Folha de estilo principal -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="all">
-      <!-- Sessão de Menu  -->
-      <section class="menu">
-        <header>
-          <img src="assets/vector.png" />
-          <h3 class="menu__title">M R</h3>
-        </header>
-        <nav>
-          <ul class="menu__list">
-            <li class="menu__list__item"><a href="#sobremim">Sobre mim</a></li>
-            <li class="menu__list__item"><a href="#skills">Skills</a></li>
-            <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
-            <li class="menu__list__item"><a href="#formacao">Formação</a></li>
-            <li class="menu__list__item"><a href="#xp">Projetos</a></li>
-            <li class="menu__list__item__contato">
-              <a href="#contato">Contato</a>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <!-- Cabeçalho & Menu de Navegação -->
+    <header class="header">
+      <div class="header__container">
+        <a href="#hero" class="header__logo" aria-label="Voltar ao início">
+          <img src="assets/vector.png" alt="Ícone M R" class="header__logo-img" />
+          <span class="header__logo-text">Marcelo Rodrigues</span>
+        </a>
+
+        <nav class="nav" id="mainNav" aria-label="Navegação Principal">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#xp" class="nav__link">Projetos</a></li>
+            <li class="nav__item"><a href="#sobremim" class="nav__link">Sobre mim</a></li>
+            <li class="nav__item"><a href="#formacao" class="nav__link">Formação</a></li>
+            <li class="nav__item nav__item--cta">
+              <a href="#contato" class="nav__link nav__link--highlight">Contato</a>
             </li>
           </ul>
         </nav>
-      </section>
 
-      <!-- Sessão de Header/Title/Hero -->
-      <section class="title">
-        <div class="title__div">
-          <img class="title__profile" src="assets/foto-perfil.jpg" />
-          <div class="title__container" id="sobremim">
-            <h2 class="title__bio">
-              Olá, meu nome é Marcelo Rodrigues e construo páginas web
-            </h2>
-            <h3 class="title__subsection">
-              Eu sou Desenvolvedor Full Stack em formação e atualmente estou
-              participando no projeto Oracle ONE na Alura.
-            </h3>
-            <ul class="title__network">
-              <!-- Ponha os links de suas redes sociais favoritas -->
-              <li class="title__network__item">
-                <a href="https://github.com/MarceloRodrigues1853"
-                  >Github <img src="assets/arrow.png" alt=""
-                /></a>
-              </li>
-              <li class="title__network__item">
+        <div class="header__actions">
+          <!-- Alternador de Tema Escuro/Claro -->
+          <button
+            id="themeToggle"
+            class="theme-toggle"
+            aria-label="Alternar tema claro/escuro"
+            title="Alternar tema"
+          >
+            <span class="theme-toggle__icon" id="themeIcon">🌙</span>
+          </button>
+
+          <!-- Botão Hamburguer Mobile -->
+          <button
+            id="mobileMenuToggle"
+            class="mobile-toggle"
+            aria-label="Abrir menu de navegação"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span class="mobile-toggle__bar"></span>
+            <span class="mobile-toggle__bar"></span>
+            <span class="mobile-toggle__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <!-- Seção Hero / Apresentação -->
+      <section class="hero" id="hero">
+        <div class="hero__container">
+          <div class="hero__content">
+            <span class="hero__badge">PORTFÓLIO / MARCELO RODRIGUES</span>
+            <p class="hero__eyebrow">Código, lógica e experiências.</p>
+            <h1 class="hero__title">
+              Olá, eu sou <span class="hero__name">Marcelo Rodrigues</span>
+            </h1>
+            <p class="hero__subtitle">Desenvolvedor Back-end Júnior.<br />Go, Java e Node.js para transformar regras de negócio em APIs.</p>
+            <p class="hero__description">Estudante de Ciência da Computação, com prática em aplicações full stack, cloud e IA. Busco minha primeira oportunidade como estagiário ou desenvolvedor back-end júnior.</p>
+            <p class="hero__stack">APIs REST <span aria-hidden="true">/</span> PostgreSQL <span aria-hidden="true">/</span> Docker</p>
+
+            <div class="hero__cta">
+              <a href="#xp" class="btn btn--primary">Explorar projetos <span aria-hidden="true">↗</span></a>
+              <a href="#contato" class="btn btn--secondary">Falar Comigo</a>
+            </div>
+
+            <!-- Links de Redes Sociais -->
+            <ul class="hero__social">
+              <li>
                 <a
-                  href="https://www.linkedin.com/in/marcelo-rodigues-12724a1b7/"
-                  >Linkedin <img src="assets/arrow.png" alt=""
-                /></a>
+                  href="https://github.com/MarceloRodrigues1853"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="Acessar GitHub de Marcelo Rodrigues"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
               </li>
-              <li class="title__network__item">
-                <a href="https://www.instagram.com/marcelo180886/"
-                  >Instagram <img src="assets/arrow.png" alt=""
-                /></a>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/marcelorodriguesdev1853/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="Acessar LinkedIn de Marcelo Rodrigues"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
               </li>
-              <li class="title__network__item">
-                <a href="">Currículo <img src="assets/arrow.png" alt="" /></a>
+              <li>
+                <a
+                  href="https://www.instagram.com/marcelo180886/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social-link"
+                  aria-label="Acessar Instagram de Marcelo Rodrigues"
+                >
+                  <svg class="social-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
               </li>
             </ul>
+          </div>
+
+          <div class="hero__image-wrapper">
+            <span class="profile-label">PLAYER PROFILE / 01</span>
+            <div class="hero__avatar-frame">
+              <img
+                src="assets/foto_perfil_atualizada.jpeg"
+                alt="Foto de perfil de Marcelo Rodrigues"
+                class="hero__avatar"
+              />
+            </div>
+            <p class="profile-caption">Marcelo Rodrigues <span>Back-end Júnior · Ciência da Computação</span></p>
           </div>
         </div>
       </section>
 
-      <!-- Sessão sobre mim -->
-      <section class="about">
-        <div class="about__container">
-          <h3 class="about__title">Sobre mim</h3>
-          <p class="about__paragraph">
-            Eu sou Marcelo S Rodrigues, um entusiasta do
-            <strong>desenvolvimento Full Stack</strong>, apaixonado por
-            transformar ideias em experiências digitais incríveis. Com foco
-            especial em <strong>React, e CSS</strong>, mas também sei utilizar
-            as tecnologias mais modernas e eficientes, como
-            <strong
-              >React, VUE, Bootstrap, Typescript, NodeJs, NPM, Python, Java,
-              Spring, API Rest e SQL</strong
-            >. Busco elevar o patamar dos <strong>negócios digitais</strong>,
-            proporcionando qualidade e inovação no mundo do Desenvolvimento
-            Digital.
-          </p>
+      <section class="journey container" aria-labelledby="journeyTitle">
+        <details id="journeyMap">
+          <summary><span><span class="section-tag">Exploração opcional</span><span id="journeyTitle">Mapa de fases</span></span><span aria-hidden="true">+</span></summary>
+          <div class="journey__body">
+            <p>Escolha qualquer fase, em qualquer ordem. Todo o conteúdo está disponível desde o início.</p>
+            <nav aria-label="Mapa de fases do portfólio">
+              <ol class="journey__grid">
+                <li><a href="#xp" data-phase="xp"><span class="phase-number">01</span><strong>Projetos</strong><span>Explore código e demos</span><span class="phase-status">Visitar fase</span></a></li>
+                <li><a href="#sobremim" data-phase="sobremim"><span class="phase-number">02</span><strong>Sobre</strong><span>Conheça minha trajetória</span><span class="phase-status">Visitar fase</span></a></li>
+                <li><a href="#formacao" data-phase="formacao"><span class="phase-number">03</span><strong>Formação</strong><span>Confira cursos e certificados</span><span class="phase-status">Visitar fase</span></a></li>
+                <li><a href="#contato" data-phase="contato"><span class="phase-number">04</span><strong>Contato</strong><span>Vamos conversar</span><span class="phase-status">Visitar fase</span></a></li>
+              </ol>
+            </nav>
+            <p id="journeyProgress" class="journey__progress" role="status" hidden>0 de 4 fases visitadas nesta sessão.</p>
+            <p class="journey__note">As fases representam seções do site. O progresso de exploração não representa certificações ou conquistas profissionais.</p>
+          </div>
+        </details>
+      </section>
 
-          <p class="about__paragraph">
-            Tenho experiência com
-            <strong>atendimento ao cliente e trabalho em equipe</strong>,
-            buscando sempre entregar soluções de qualidade e satisfazer as
-            necessidades dos meus contratantes.
-          </p>
+      <!-- Seção Sobre Mim -->
+      <section class="about" id="sobremim">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Apresentação</span>
+            <h2 class="section-title">Sobre Mim</h2>
+          </div>
 
-          <p class="about__paragraph">
-            Além disso, sou um
-            <strong>apaixonado por aprender e evoluir</strong>, e estou sempre
-            buscando novas oportunidades de aprendizado para promover tanto meu
-            crescimento pessoal quanto o sucesso da empresa.
-          </p>
-
-          <p class="about__paragraph">
-            Estou cursando diversos Formações e certificações online nas áreas
-            de Ciência da Computação, Programação de Computadores, Sistemas
-            Operacionais e Desenvolvimento de Jogos, entre outros.
-          </p>
-
-          <p class="about__paragraph">
-            Tenho habilidades de atenção aos detalhes, resolução de problemas e
-            um foco orientado a Resultado.
-          </p>
-
-          <p class="about__paragraph">
-            Meu <strong>objetivo</strong> é me tornar um desenvolvedor completo
-            e inovador.
-          </p>
+          <div class="about__card">
+            <div class="about__text">
+              <p>Sou <strong>Marcelo Rodrigues</strong>, estudante de Ciência da Computação na Anhanguera, com conclusão prevista para <strong>outubro de 2027</strong>. Busco minha primeira oportunidade em desenvolvimento, com foco em back-end.</p>
+              <p>Tenho prática em projetos com <strong>Go, Java, JavaScript, Python e SQL</strong>. Desenvolvo APIs REST e integrações com PostgreSQL e MySQL, usando Git/GitHub, Docker, testes automatizados e GitHub Actions. No sistema de pedidos em Go, exploro DDD, Clean Architecture, RabbitMQ, Saga e observabilidade.</p>
+              <p>Minha trajetória anterior em operações e atendimento fortaleceu organização, comunicação e resolução de problemas. Quero colaborar com uma equipe e evoluir entregando software bem estruturado.</p>
+              <div class="content-links"><a href="https://www.linkedin.com/in/marcelorodriguesdev1853/" target="_blank" rel="noopener noreferrer" class="source-link">Perfil profissional no LinkedIn</a> <a href="https://github.com/MarceloRodrigues1853" target="_blank" rel="noopener noreferrer" class="source-link">Código e projetos no GitHub</a> <a class="source-link" href="#skills">Conhecer minha stack</a></div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Sessão de Skills/Habilidades -->
-      <section class="skills">
-        <h3 class="skills__title" id="skills">Skills</h3>
-        <div class="skills__line">
-          <div class="skills__box">
-            <ul>
-              <li class="skills__img">
-                <img src="assets/htlm.png" alt="HTML 5" />
-              </li>
-              <li class="skills__name">HTML 5</li>
-            </ul>
-          </div>
-          <div class="skills__box">
-            <ul>
-              <li class="skills__img">
-                <img src="assets/css_icon.png" alt="HTML 5" />
-              </li>
-              <li class="skills__name">CSS</li>
-            </ul>
-          </div>
-          <div class="skills__box">
-            <ul>
-              <li class="skills__img">
-                <img src="assets/js_icon.png" alt="HTML 5" />
-              </li>
-              <li class="skills__name">JavaScript</li>
-            </ul>
-          </div>
-          <div class="skills__box">
-            <ul>
-              <li class="skills__img">
-                <img src="assets/nodejs_icon.png" alt="HTML 5" />
-              </li>
-              <li class="skills__name">Node JS</li>
-            </ul>
-          </div>
-          <div class="skills__box">
-            <ul>
-              <li class="skills__img">
-                <img src="assets/react_icon.png" alt="HTML 5" />
-              </li>
-              <li class="skills__name">React</li>
-            </ul>
+      <!-- Seção Skills / Tecnologias -->
+      <section class="skills" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Competências</span>
+            <h2 class="section-title">Tecnologias & Ferramentas</h2>
           </div>
 
-          <!-- Coloque as outras habilidades aqui -->
+          <p class="content-intro">Tecnologias praticadas em projetos e formações. A stack reúne o perfil profissional e os repositórios, sem níveis de proficiência inventados.</p>
+          <div class="skills__grid"><article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">01</span><h3 class="skill-card__name">Backend</h3><p class="stack-card__tools">Go · Java · Node.js · Express · Spring Boot</p><p class="skill-card__level">APIs REST, regras de negócio e arquitetura em camadas</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">02</span><h3 class="skill-card__name">Frontend</h3><p class="stack-card__tools">React · TypeScript · JavaScript · HTML · CSS · Vite</p><p class="skill-card__level">Interfaces e integração com APIs</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">03</span><h3 class="skill-card__name">Dados</h3><p class="stack-card__tools">PostgreSQL · MySQL · TiDB Cloud · SQL</p><p class="skill-card__level">Persistência relacional e consultas parametrizadas</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">04</span><h3 class="skill-card__name">Cloud & DevOps</h3><p class="stack-card__tools">AWS · Google Cloud · Docker · Linux · GitHub Actions</p><p class="skill-card__level">Containers, serviços de nuvem e CI/CD</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">05</span><h3 class="skill-card__name">IA aplicada</h3><p class="stack-card__tools">Python · CrewAI · Gemini · LangGraph · RAG</p><p class="skill-card__level">Agentes e recuperação de evidências documentais</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">06</span><h3 class="skill-card__name">Segurança & qualidade</h3><p class="stack-card__tools">OAuth 2.0 · OpenID Connect · JWT · Testes · Prometheus</p><p class="skill-card__level">Autenticação, testes e observabilidade</p></article></div>
+          <p class="source-note">Fontes: <a href="https://www.linkedin.com/in/marcelorodriguesdev1853/" target="_blank" rel="noopener noreferrer" class="source-link">LinkedIn</a> e <a href="https://github.com/MarceloRodrigues1853/MarceloRodrigues1853/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">perfil no GitHub</a>.</p>
         </div>
       </section>
 
-      <!-- Sessão de Hobbies -->
+      <!-- Seção Hobbies -->
       <section class="hobbies" id="hobbies">
-        <h3 class="hobbies__title">Hobbies</h3>
-        <div class="hobbies__line">
-          <div class="hobbies__box">
-            <ul>
-              <li class="hobbies__img">
-                <img src="assets/skate_icon.png" alt="Andar de skate" />
-              </li>
-              <li class="hobbies__name">Praticar Exercícios</li>
-            </ul>
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Interesses Pessoais</span>
+            <h2 class="section-title">Hobbies</h2>
           </div>
 
-          <div class="hobbies__box">
-            <ul>
-              <li class="hobbies__img">
-                <img src="assets/guitar_icon.png" alt="Andar de skate" />
-              </li>
-              <li class="hobbies__name">Tocar instrumentos</li>
-            </ul>
-          </div>
+          <div class="hobbies__grid">
+            <div class="hobby-card">
+              <img src="assets/skate_icon.png" alt="Ícone de skate" class="hobby-card__icon" />
+              <h3 class="hobby-card__name">Exercícios & caminhadas</h3>
+            </div>
 
-          <div class="hobbies__box">
-            <ul>
-              <li class="hobbies__img">
-                <img src="assets/headphones_icon.png" alt="Andar de skate" />
-              </li>
-              <li class="hobbies__name">Ouvir música</li>
-            </ul>
-          </div>
+            <div class="hobby-card">
+              <img src="assets/guitar_icon.png" alt="Ícone de violão" class="hobby-card__icon" />
+              <h3 class="hobby-card__name">Tocar Instrumentos</h3>
+            </div>
 
-          <div class="hobbies__box">
-            <ul>
-              <li class="hobbies__img">
-                <img src="assets/tv_icon.png" alt="Andar de skate" />
-              </li>
-              <li class="hobbies__name">Assistir Séries</li>
-            </ul>
-          </div>
+            <div class="hobby-card">
+              <img src="assets/headphones_icon.png" alt="Ícone de fones" class="hobby-card__icon" />
+              <h3 class="hobby-card__name">Música & Podcasts</h3>
+            </div>
 
-          <div class="hobbies__box">
-            <ul>
-              <li class="hobbies__img">
-                <img src="assets/forkspoon_icon.png" alt="Andar de skate" />
-              </li>
-              <li class="hobbies__name">Cozinhar</li>
-            </ul>
-          </div>
+            <div class="hobby-card">
+              <img src="assets/tv_icon.png" alt="Ícone de televisão" class="hobby-card__icon" />
+              <h3 class="hobby-card__name">Filmes & Séries</h3>
+            </div>
 
-          <!-- Coloque os outros hobbies aqui -->
+            <div class="hobby-card">
+              <img src="assets/forkspoon_icon.png" alt="Ícone de culinária" class="hobby-card__icon" />
+              <h3 class="hobby-card__name">Culinária</h3>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Sessão de Histórico Acadêmico -->
-      <section class="academic">
-        <h2 class="academic__title" id="formacao">Formação / Cursos</h2>
-        <div class="academic__courses">
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
-              <li class="academic__courses__item__img">
-                <img src="assets/FE.png" alt="Logo" />
-              </li>
-              <li class="academic__courses__item__title">
-                <h4>
+      <!-- Formação e credenciais com fontes de origem -->
+      <section class="academic" id="formacao">
+        <div class="container">
+          <div class="section-header"><span class="section-tag">Formação & evidências</span><h2 class="section-title">Aprendizado que vira prática</h2><p class="content-intro">Formações, certificados e selos com acesso às fontes de origem.</p></div>
+          <div class="academic__grid">
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Bacharelado em Ciência da Computação</h3>
+          <span class="academic-card__institution">Anhanguera Educacional</span>
+          <span class="academic-card__year">Abr. 2024 – conclusão prevista: out. 2027</span>
+          <p class="education-description">Em andamento. Formação acadêmica e prática em desenvolvimento de software.</p>
+          <a href="https://www.linkedin.com/in/marcelorodriguesdev1853/details/education/" target="_blank" rel="noopener noreferrer" class="source-link">Consultar fonte no LinkedIn</a>
+          </div>
+          </article>
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Ser+Tech Núclea — Back-end Java</h3>
+          <span class="academic-card__institution">Ada / Núclea</span>
+          <span class="academic-card__year">Mar. – jun. 2026 · 108 horas</span>
+          <p class="education-description">Algoritmos, técnicas de programação, orientação a objetos e programação web.</p>
+          <a href="https://www.linkedin.com/in/marcelorodriguesdev1853/details/education/" target="_blank" rel="noopener noreferrer" class="source-link">Consultar fonte no LinkedIn</a>
+          </div>
+          </article>
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Ser+ Tech | Trilha Go</h3>
+          <span class="academic-card__institution">Ada / Núclea</span>
+          <span class="academic-card__year">Jun. – ago. 2026 · 81 horas</span>
+          <p class="education-description">APIs REST, PostgreSQL, Docker, testes e arquitetura em camadas. Link do certificado informado no LinkedIn.</p>
+          <a href="https://operational-production.s3.sa-east-1.amazonaws.com/certificados/1707011.pdf" target="_blank" rel="noopener noreferrer" class="source-link">Consultar certificado</a>
+          </div>
+          </article>
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Google Cybersecurity</h3>
+          <span class="academic-card__institution">Google / Coursera</span>
+          <span class="academic-card__year">Jun. – dez. 2025</span>
+          <p class="education-description">Formação em fundamentos de segurança, Linux, Python e SQL. Selos de emissão listados abaixo.</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/8YE03A6NPT65" target="_blank" rel="noopener noreferrer" class="source-link">Consultar certificado</a>
+          </div>
+          </article>
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Ensino Médio</h3>
+          <span class="academic-card__institution">E.E.E.M Gomercinda Dornelles da Fontoura</span>
+          <span class="academic-card__year">Concluído</span>
+          <p class="education-description">Conclusão informada no perfil; período não publicado.</p>
+          <a href="https://www.linkedin.com/in/marcelorodriguesdev1853/details/education/" target="_blank" rel="noopener noreferrer" class="source-link">Consultar fonte no LinkedIn</a>
+          </div>
+          </article>
+          <article class="academic-card">
+          <div class="academic-card__content">
+          <span class="credential-status">Informado no LinkedIn</span>
+          <h3 class="academic-card__title">Fundamentos de IA Generativa</h3>
+          <span class="academic-card__institution">Santander Open Academy</span>
+          <span class="academic-card__year">Set. 2026</span>
+          <p class="education-description">Credencial informada no LinkedIn. Emissor e data preservados conforme o perfil.</p>
+          <a href="https://www.coursera.org/account/accomplishments/badge/nzYkLdFNS_C2JC3RTevwbg" target="_blank" rel="noopener noreferrer" class="source-link">Consultar credencial</a>
+          </div>
+          </article>
+          </div>
+          <div class="credentials-heading"><h3>Selos & certificações</h3><a href="https://www.credly.com/users/marcelo-rodrigues.26e8de27/badges/credly" target="_blank" rel="noopener noreferrer" class="source-link">Abrir carteira completa no Credly</a></div>
+          <p class="source-note">Nomes, emissores e datas consultados no Credly em 02/10/2026. As duas emissões de Cibersegurança são exibidas como registros distintos, sem tratá-las como duas formações.</p>
+          <div class="badges__grid">
+          <article class="badge-card">
+          <img src="assets/credly-cybersecurity-2026.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Google Cybersecurity Professional Certificate(v.2)</h4>
+          <p>Coursera · Emitido em 08/04/2026</p>
+          <a href="https://www.credly.com/badges/fde4da79-7c03-4cfc-9737-fdd043f49cba" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Google Cybersecurity Professional Certificate(v.2)">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-cybersecurity-2025.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Google Cybersecurity Professional Certificate V2</h4>
+          <p>Coursera · Emitido em 07/12/2025</p>
+          <a href="https://www.credly.com/badges/2befda49-6c0a-45ad-8ae5-5c946a9a73d0" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Google Cybersecurity Professional Certificate V2">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-cloud-foundations.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Google Cloud Computing Foundations Certificate</h4>
+          <p>Google Cloud · Emitido em 30/10/2025</p>
+          <a href="https://www.credly.com/badges/3c4508b4-1886-4335-8bbf-de60b9a1f739" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Google Cloud Computing Foundations Certificate">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-ml-apis.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Prepare Data for ML APIs on Google Cloud Skill Badge</h4>
+          <p>Google Cloud · Emitido em 30/10/2025</p>
+          <a href="https://www.credly.com/badges/b1ebd1b7-5382-4669-870a-863393dc28ea" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Prepare Data for ML APIs on Google Cloud Skill Badge">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-secure-network.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Build a Secure Google Cloud Network Skill Badge</h4>
+          <p>Google Cloud · Emitido em 26/10/2025</p>
+          <a href="https://www.credly.com/badges/5348f3e2-75c8-40ec-b68e-4398ceb2385c" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Build a Secure Google Cloud Network Skill Badge">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-app-dev.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Set Up an App Dev Environment on Google Cloud Skill Badge</h4>
+          <p>Google Cloud · Emitido em 25/10/2025</p>
+          <a href="https://www.credly.com/badges/66c365bb-e19a-4a20-9f9c-ba8265be2fff" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Set Up an App Dev Environment on Google Cloud Skill Badge">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-load-balancing.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Implement Load Balancing on Compute Engine Skill Badge</h4>
+          <p>Google Cloud · Emitido em 24/10/2025</p>
+          <a href="https://www.credly.com/badges/18267cc8-a40b-4765-a9e6-8c280dc04d25" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Implement Load Balancing on Compute Engine Skill Badge">Ver credencial ↗</a>
+          </div>
+          </article>
+          <article class="badge-card">
+          <img src="assets/credly-it-support.png" alt="" width="96" height="96" loading="lazy" decoding="async" />
+          <div>
+          <span class="credential-status">Publicado no Credly</span>
+          <h4>Certificado Profissional de Suporte em TI do Google</h4>
+          <p>Coursera · Emitido em 25/01/2024</p>
+          <a href="https://www.credly.com/badges/80e6258a-0b08-4b82-a51e-cc3335dac9f0" target="_blank" rel="noopener noreferrer" class="source-link" aria-label="Ver credencial de Certificado Profissional de Suporte em TI do Google">Ver credencial ↗</a>
+          </div>
+          </article>
+          </div>
+          <details class="content-details"><summary>Registros anteriores — aguardam confirmação</summary><p class="source-note">Preservados da cópia local: confirmar emissores, datas e links antes de apresentá-los como credenciais verificadas. A certificação Oracle Cloud mencionada no LinkedIn também aguarda link individual de verificação.</p>          <div class="academic__grid">
+            <!-- CC50 -->
+            <div class="academic-card">
+              <div class="academic-card__logo-wrapper">
+                <img src="assets/FE.png" alt="Logo Fundação Estudar" class="academic-card__logo" />
+              </div>
+              <div class="academic-card__content">
+                <h3 class="academic-card__title">
                   <a
                     href="http://edools-3-production.s3.amazonaws.com/org-6988/school-7227/certificates/enrollment-8538819/course-84414-oucem.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >CC50: Introdução à Ciência da Computação</a
                   >
-                </h4>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2023 - Fundação Estudar</p>
-              </li>
-            </ul>
-          </div>
+                    CC50: Introdução à Ciência da Computação
+                  </a>
+                </h3>
+                <span class="academic-card__institution">Fundação Estudar — curso baseado no CS50</span>
+                <span class="academic-card__year">2023</span>
+              </div>
+            </div>
 
-          <!-- Adicione as outras formações acadêmicas aqui -->
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
-              <li class="academic__courses__item__img">
-                <img src="assets/logotipo-ONE1.svg" alt="Logo" />
-              </li>
-              <li class="academic__courses__item__title">
-                <h4>
+            <!-- ONE Alura -->
+            <div class="academic-card">
+              <div class="academic-card__logo-wrapper">
+                <img src="assets/logotipo-ONE1.svg" alt="Logo Oracle Next Education" class="academic-card__logo" />
+              </div>
+              <div class="academic-card__content">
+                <h3 class="academic-card__title">
                   <a
                     href="https://cursos.alura.com.br/degree/certificate/d1fbdeba-bf65-43fb-8459-1b6b1cdb5a22?lang"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Empreendedorismo, Agilidade T6 - ONE</a
                   >
-                </h4>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2024 - Alura</p>
-              </li>
-            </ul>
-          </div>
+                    Empreendedorismo, Agilidade T6 - ONE
+                  </a>
+                </h3>
+                <span class="academic-card__institution">Alura / Oracle</span>
+                <span class="academic-card__year">2024</span>
+              </div>
+            </div>
 
-          <!-- Adicione as outras formações acadêmicas aqui -->
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
-              <li class="academic__courses__item__img">
-                <img src="assets/Proz.png" alt="Logo" />
-              </li>
-              <li class="academic__courses__item__title">
-                <h4>
+            <!-- Proz AWS -->
+            <div class="academic-card">
+              <div class="academic-card__logo-wrapper">
+                <img src="assets/Proz.png" alt="Logo Proz" class="academic-card__logo" />
+              </div>
+              <div class="academic-card__content">
+                <h3 class="academic-card__title">
                   <a
                     href="https://www.linkedin.com/in/marcelo-rodigues-12724a1b7/details/certifications/1709811887621/single-media-viewer/?profileId=ACoAADJnUC8BuJmvWJb6TmX5puJwdEKM75qRPmU"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Estensao-FrontEnd(TC)</a
                   >
-                </h4>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2024 - Proz / AWS</p>
-              </li>
-            </ul>
-          </div>
+                    Extensão FrontEnd (TC)
+                  </a>
+                </h3>
+                <span class="academic-card__institution">Proz / AWS</span>
+                <span class="academic-card__year">2024</span>
+              </div>
+            </div>
 
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
-              <li class="academic__courses__item__img">
-                <img src="assets/logo-full.svg" alt="Logo-DIO" />
-              </li>
-              <li class="academic__courses__item__title">
-                <h4>
+            <!-- DIO Java -->
+            <div class="academic-card">
+              <div class="academic-card__logo-wrapper">
+                <img src="assets/logo-full.svg" alt="Logo DIO" class="academic-card__logo" />
+              </div>
+              <div class="academic-card__content">
+                <h3 class="academic-card__title">
                   <a
                     href="https://www.dio.me/certificate/A7HSVMG3/share"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Santander Bootcamp 2023 - Backend Java</a
                   >
-                </h4>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2024 - DIO.me</p>
-              </li>
-            </ul>
-          </div>
+                    Santander Bootcamp 2023 - Backend Java
+                  </a>
+                </h3>
+                <span class="academic-card__institution">DIO.me</span>
+                <span class="academic-card__year">2024</span>
+              </div>
+            </div>
 
-          <!-- Adicione as outras formações acadêmicas aqui -->
-          <div class="academic__courses__box">
-            <ul class="academic__courses__list">
-              <!-- Insira a logo de seu local de formação -->
-              <li class="academic__courses__item__img">
-                <img src="assets/cursera.svg" alt="Logo-cursera" />
-              </li>
-              <li class="academic__courses__item__title">
-                <h4>
+            <!-- Coursera Google TI -->
+            <div class="academic-card">
+              <div class="academic-card__logo-wrapper">
+                <img src="assets/cursera.svg" alt="Logo Coursera" class="academic-card__logo" />
+              </div>
+              <div class="academic-card__content">
+                <h3 class="academic-card__title">
                   <a
                     href="https://www.coursera.org/account/accomplishments/professional-cert/FQLBG2RQAQDA"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >Suporte em TI do Google</a
                   >
-                </h4>
-              </li>
-              <li class="academic__courses__item__subtitle">
-                <p>2024 - Coursera</p>
-              </li>
-            </ul>
+                    Suporte em TI do Google
+                  </a>
+                </h3>
+                <span class="academic-card__institution">Coursera / Google</span>
+                <span class="academic-card__year">2024</span>
+              </div>
+            </div>
           </div>
-
-          <!-- Adicione as outras formações acadêmicas aqui -->
+</details>
+          <p class="source-note"><a href="https://www.linkedin.com/in/marcelorodriguesdev1853/details/certifications/" target="_blank" rel="noopener noreferrer" class="source-link">Consultar outras licenças e certificados no LinkedIn</a></p>
         </div>
       </section>
 
-      <!-- Sessão de Experiência Profissional/Projetos-->
-      <section class="experience">
-        <h2 class="experience__section__title" id="xp">
-          Experiência Profissional
-        </h2>
+      <!-- Seção Projetos em Destaque -->
+      <section class="experience" id="xp">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Portfólio</span>
+            <h2 class="section-title">Projetos em Destaque</h2>
+          </div>
 
-        <!-- Primeira experiência/projeto -->
-        <div class="experience__box">
-          <img
-            class="experience__img"
-            src="assets/jogo-numeo-secreto.jpeg"
-            alt="Imagem"
-          />
-          <div class="experience__info">
-            <h2 class="experience__title">Jogo do número secreto (Alura)</h2>
-            <h3 class="experience__text">Curso Lógica da Programação</h3>
-            <div class="experience__description">
-              <span class="experience__repo">
-                <a
-                href="https://github.com/MarceloRodrigues1853/jogo-numero-secretoAlura"
-                >
-                  <button class="experiencia__botao--repo">Repositório</button>
-                </a>
-              </span>
-              <span class="experience__demo">
-                <a href="https://jogo-numero-secreto-alura-snowy.vercel.app/">
-                  <button class="experiencia__botao--demo">Ver demo</button>
-                </a>
-              </span>
+          <p class="content-intro">Seleção de aplicações e estudos com código, documentação e decisões técnicas. Descrições baseadas nos READMEs dos repositórios e no LinkedIn.</p>
+          <div class="projects__grid curated-projects">
+          <article class="project-card">
+          <div class="project-card__image-container">
+          <img class="project-card__image" src="assets/projeto-pedidos.png" alt="Interface do Sistema de Pedidos em Go publicada no repositório" loading="lazy" decoding="async" width="720" height="400" />
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Projeto principal · Full stack</span>
+          <div class="project-card__tags">
+          <span class="tag">Go</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">RabbitMQ</span>
+          <span class="tag">React</span>
+          <span class="tag">RAG</span>
+          </div>
+          <h3 class="project-card__title">Sistema de Pedidos em Go</h3>
+          <p class="project-card__description">Pedidos, reserva de estoque e pagamentos fictícios com processamento assíncrono. Inclui painel web e tutor documental.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>Saga compensa falhas de pagamento e devolve o estoque.</li>
+          <li>Camadas separam domínio, casos de uso e persistência.</li>
+          <li>Tutor RAG indica fontes e recusa respostas sem evidência.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/ada_go-desafio_pedidos/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">A demo usa hospedagem gratuita; os serviços podem levar cerca de um minuto para iniciar.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/ada_go-desafio_pedidos" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://frontend-phi-ten-75.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Abrir demo</a>
+          </div>
+          </div>
+          </article>
+          <article class="project-card">
+          <div class="project-card__image-container">
+          <img class="project-card__image" src="assets/projeto-nutrifit.png" alt="Interface do NutriFit publicada no repositório" loading="lazy" decoding="async" width="720" height="400" />
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Aplicação acadêmica · Full stack</span>
+          <div class="project-card__tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">TiDB</span>
+          <span class="tag">JavaScript</span>
+          </div>
+          <h3 class="project-card__title">NutriFit</h3>
+          <p class="project-card__description">E-commerce demonstrativo com catálogo, cadastro, login e checkout simulado. Evolução de um projeto integrador em equipe.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>Frontend, API e banco ficam em serviços independentes.</li>
+          <li>Senhas usam bcrypt; consultas são parametrizadas e a conexão com o banco usa TLS.</li>
+          <li>Testes de cadastro e autenticação usam conexão simulada.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/Nutrift/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">Produtos e pagamentos são demonstrativos. A API gratuita pode demorar na primeira chamada.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/Nutrift" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://projeto-integrador-lilac.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Abrir demo</a>
+          </div>
+          </div>
+          </article>
+          <article class="project-card">
+          <div class="project-cover" aria-hidden="true">
+          <span>Projeto de conclusão · Cloud</span>
+          <strong>Projeto Filmes AWS</strong>
+          <span>React / Node.js / AWS</span>
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Projeto de conclusão · Cloud</span>
+          <div class="project-card__tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Docker</span>
+          </div>
+          <h3 class="project-card__title">Projeto Filmes AWS</h3>
+          <p class="project-card__description">Catálogo de filmes com autenticação JWT, avaliações e recomendações, desenvolvido no curso de Aprofundamento Cloud Proz + AWS.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>MySQL no RDS e imagens no S3 separam dados e arquivos.</li>
+          <li>Containers em EC2, Nginx e HTTPS compõem a infraestrutura.</li>
+          <li>GitHub Actions automatiza build e atualização dos containers.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/projeto_filmes_aws/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">Link de demo informado no README; disponibilidade atual ainda não confirmada.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/projeto_filmes_aws" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://projeto-filmes.ddns.net" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Abrir demo</a>
+          </div>
+          </div>
+          </article>
+          <article class="project-card">
+          <div class="project-cover" aria-hidden="true">
+          <span>Estudo de backend</span>
+          <strong>API CRUD de Usuários</strong>
+          <span>Node.js / Express / MySQL</span>
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Estudo de backend</span>
+          <div class="project-card__tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MySQL</span>
+          </div>
+          <h3 class="project-card__title">API CRUD de Usuários</h3>
+          <p class="project-card__description">API REST para criar, consultar, atualizar e remover usuários, com exemplos de execução e testes manuais no Postman.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>Connection pool reutiliza conexões com o MySQL.</li>
+          <li>Placeholders evitam concatenar entradas nas consultas SQL.</li>
+          <li>Rotas e conexão com o banco têm responsabilidades separadas.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/api-crud-node-mysql/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">Execução local documentada no repositório; nenhuma demo pública foi confirmada.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/api-crud-node-mysql" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://github.com/MarceloRodrigues1853/api-crud-node-mysql/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver projeto</a>
+          </div>
+          </div>
+          </article>
+          <article class="project-card">
+          <div class="project-cover" aria-hidden="true">
+          <span>Projeto em equipe · Integração full stack</span>
+          <strong>PetCare — Hackathon ONE</strong>
+          <span>Java / Spring Boot / React</span>
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Projeto em equipe · Integração full stack</span>
+          <div class="project-card__tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">React</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Docker</span>
+          </div>
+          <h3 class="project-card__title">PetCare — Hackathon ONE</h3>
+          <p class="project-card__description">Plataforma de cuidados com pets da Equipe 2 – Brasil. Minha participação é descrita como integração e apoio full stack.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>Docker Compose organiza frontend, backend e MySQL.</li>
+          <li>Swagger documenta os endpoints para a integração.</li>
+          <li>O README descreve cadastro integrado e lista login JWT e reservas como próximos passos.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/petcare-Hackathon_ONE/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">MVP educacional. A documentação consultada contém funcionalidades ainda planejadas.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/petcare-Hackathon_ONE" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://github.com/MarceloRodrigues1853/petcare-Hackathon_ONE/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver projeto</a>
+          </div>
+          </div>
+          </article>
+          <article class="project-card">
+          <div class="project-cover" aria-hidden="true">
+          <span>Aplicação desktop</span>
+          <strong>Calculadora Python</strong>
+          <span>Python / Tkinter / PyInstaller</span>
+          </div>
+          <div class="project-card__body">
+          <span class="project-label">Aplicação desktop</span>
+          <div class="project-card__tags">
+          <span class="tag">Python</span>
+          <span class="tag">Tkinter</span>
+          <span class="tag">PyInstaller</span>
+          </div>
+          <h3 class="project-card__title">Calculadora Python</h3>
+          <p class="project-card__description">Calculadora com interface gráfica e registro persistente das operações, acompanhada de guia de compilação.</p>
+          <details class="project-decisions">
+          <summary>Decisões documentadas</summary>
+          <ul>
+          <li>Tkinter oferece interface desktop nativa.</li>
+          <li>O histórico é salvo em arquivo de texto com data e hora.</li>
+          <li>PyInstaller permite distribuir um executável.</li>
+          </ul>
+          <a href="https://github.com/MarceloRodrigues1853/calculadora-python-gui/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">Ler documentação técnica</a>
+          </details>
+          <p class="project-note">Demonstração e instruções disponíveis no README; não exige uma demo web.</p>
+          <div class="project-card__actions">
+          <a href="https://github.com/MarceloRodrigues1853/calculadora-python-gui" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Repositório</a>
+          <a href="https://github.com/MarceloRodrigues1853/calculadora-python-gui/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver projeto</a>
+          </div>
+          </div>
+          </article>
+          </div>
+          <p class="source-note"><a href="https://github.com/MarceloRodrigues1853?tab=repositories" target="_blank" rel="noopener noreferrer" class="source-link">Explorar todos os repositórios no GitHub</a></p>
+          <details class="content-details"><summary>Mais projetos: jogos e interfaces</summary><p class="source-note">Projetos da cópia local. Descrições e demos abaixo ainda aguardam revisão técnica.</p>          <div class="projects__grid">
+            <!-- Projeto 1 -->
+            <article class="project-card">
+              <div class="project-card__image-container">
+                <img
+                  src="assets/jogo-numeo-secreto.jpeg"
+                  alt="Screenshot do Jogo do Número Secreto"
+                  class="project-card__image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Lógica</span>
+                  <span class="tag">HTML/CSS</span>
+                </div>
+                <h3 class="project-card__title">Jogo do Número Secreto</h3>
+                <p class="project-card__description">
+                  Aplicação interativa com reconhecimento de voz e manipulação de estado em JavaScript,
+                  criada no módulo de Lógica de Programação da Alura/Oracle ONE.
+                </p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/MarceloRodrigues1853/jogo-numero-secretoAlura"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--outline"
+                  >
+                    Repositório
+                  </a>
+                  <a
+                    href="https://jogo-numero-secreto-alura-snowy.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--primary"
+                  >
+                    Ver Demonstração
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projeto 2 -->
+            <article class="project-card">
+              <div class="project-card__image-container">
+                <img
+                  src="assets/alura-play.jpeg"
+                  alt="Screenshot do Alura Play"
+                  class="project-card__image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__tags">
+                  <span class="tag">CSS Grid</span>
+                  <span class="tag">Flexbox</span>
+                  <span class="tag">Responsividade</span>
+                </div>
+                <h3 class="project-card__title">Alura Play (Streaming UI)</h3>
+                <p class="project-card__description">
+                  Interface moderna inspirada em plataformas de vídeo, implementando layout totalmente
+                  responsivo através de Flexbox e CSS Grid para múltiplos dispositivos.
+                </p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/MarceloRodrigues1853/Alura_Play-ONET6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--outline"
+                  >
+                    Repositório
+                  </a>
+                  <a
+                    href="https://alura-play-onet-6.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--primary"
+                  >
+                    Ver Demonstração
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Projeto 3 -->
+            <article class="project-card">
+              <div class="project-card__image-container">
+                <img
+                  src="assets/jogo-da-memoria.jpeg"
+                  alt="Screenshot do Jogo da Memória"
+                  class="project-card__image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__tags">
+                  <span class="tag">JavaScript Moderno</span>
+                  <span class="tag">CSS Animations</span>
+                  <span class="tag">DOM</span>
+                </div>
+                <h3 class="project-card__title">Jogo da Memória com Emojis</h3>
+                <p class="project-card__description">
+                  Jogo clássico da memória desenvolvido com JavaScript puro, gerenciando lógica de turnos,
+                  temporizadores, cálculo de pontuação e animações de flip 3D em CSS.
+                </p>
+                <div class="project-card__actions">
+                  <a
+                    href="https://github.com/MarceloRodrigues1853/Jogo-da-memoria-com-Emojis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--outline"
+                  >
+                    Repositório
+                  </a>
+                  <a
+                    href="https://marcelorodrigues1853.github.io/Jogo-da-memoria-com-Emojis/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--primary"
+                  >
+                    Ver Demonstração
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+</details>
+        </div>
+      </section>
+
+      <!-- Seção de Contato -->
+      <section class="contact" id="contato">
+        <div class="container">
+          <div class="contact__wrapper">
+            <div class="contact__info">
+              <span class="section-tag">Contato</span>
+              <h2 class="section-title">Vamos conversar?</h2>
+              <p class="contact__text">
+                Quer discutir uma oportunidade profissional, propor uma parceria em projetos de
+                software ou trocar ideias sobre tecnologia? Preencha o formulário e retornarei o
+                mais breve possível.
+              </p>
+              <div class="contact__image-box">
+                <img
+                  src="assets/contact_image.png"
+                  alt="Ilustração de contato"
+                  class="contact__illustration"
+                />
+              </div>
+            </div>
+
+            <div class="contact__form-container">
+              <form class="contact-form" id="contactForm" novalidate>
+                <!-- Campo Nome -->
+                <div class="form-group">
+                  <label for="name" class="form-label">Nome Completo</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ex: Seu Nome"
+                    required
+                    maxlength="50"
+                  />
+                  <span class="error-message" id="nameError" aria-live="polite"></span>
+                </div>
+
+                <!-- Campo E-mail -->
+                <div class="form-group">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="seu.email@exemplo.com"
+                    required
+                  />
+                  <span class="error-message" id="emailError" aria-live="polite"></span>
+                </div>
+
+                <!-- Campo Assunto -->
+                <div class="form-group">
+                  <label for="subject" class="form-label">Assunto</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="Sobre o que gostaria de falar?"
+                    required
+                    maxlength="50"
+                  />
+                  <span class="error-message" id="subjectError" aria-live="polite"></span>
+                </div>
+
+                <!-- Campo Mensagem -->
+                <div class="form-group">
+                  <div class="form-label-row">
+                    <label for="message" class="form-label">Mensagem</label>
+                    <span class="char-counter" id="charCounter">0 / 300</span>
+                  </div>
+                  <textarea
+                    class="form-textarea"
+                    rows="5"
+                    id="message"
+                    name="message"
+                    placeholder="Escreva sua mensagem aqui..."
+                    required
+                    maxlength="300"
+                  ></textarea>
+                  <span class="error-message" id="messageError" aria-live="polite"></span>
+                </div>
+
+                <!-- Status de Envio -->
+                <div id="formStatus" class="form-status" role="alert" aria-live="assertive"></div>
+
+                <button id="submitButton" type="submit" class="btn btn--primary btn--block">
+                  <span id="buttonText">Enviar Mensagem</span>
+                  <span id="buttonSpinner" class="spinner" style="display: none;"></span>
+                </button>
+              </form>
             </div>
           </div>
         </div>
-
-        <!-- Segunda experiência/projeto -->
-        <div class="experience__box">
-          <img
-            class="experience__img"
-            src="assets/alura-play.jpeg"
-            alt="Imagem"
-          />
-          <div class="experience__info">
-            <h2 class="experience__title">Alura Play (demo)</h2>
-            <h3 class="experience__text">Curso CSS Flexbox da Alura</h3>
-            <div class="experience__description">
-              <span class="experience__repo">
-                <a
-                  href="https://github.com/MarceloRodrigues1853/Alura_Play-ONET6"
-                >
-                  <button class="experiencia__botao--repo">Repositório</button>
-                </a>
-              </span>
-              <span class="experience__demo">
-                <a href="https://alura-play-onet-6.vercel.app/">
-                  <button class="experiencia__botao--demo">Ver demo</button>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Terceira experiência/projeto -->
-        <div class="experience__box">
-          <img
-            class="experience__img"
-            src="assets/jogo-da-memoria.jpeg"
-            alt="Imagem"
-          />
-          <div class="experience__info">
-            <h2 class="experience__title">Jogo da Memória com Emojis</h2>
-            <h3 class="experience__text">Formação Developher JavaScript</h3>
-            <div class="experience__description">
-              <span class="experience__repo">
-                <a
-                  href="https://github.com/MarceloRodrigues1853/Jogo-da-memoria-com-Emojis"
-                >
-                  <button class="experiencia__botao--repo">Repositório</button>
-                </a>
-              </span>
-              <span class="experience__demo">
-                <a
-                  href="https://marcelorodrigues1853.github.io/Jogo-da-memoria-com-Emojis/"
-                >
-                  <button class="experiencia__botao--demo">Ver demo</button>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Adicione outras experiências/projetos aqui -->
       </section>
+    </main>
 
-      <!-- Sessão de Contato -->
-      <section class="formcontato">
-        <div id="contato" class="formcontato__contacto">
-          <div class="formcontato--esquerda">
-            <img
-              class="formcontato__img"
-              src="assets/contact_image.png"
-              alt="Imagem de contato"
-            />
-          </div>
-          <div class="formcontato__text">
-            <h2 class="formcontato__title">Contato</h2>
-            <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
-            <h3 class="formcontato__subtext">
-              Preencha o formulário ao lado e entrarei em contato o mais rápido
-              possível.
-            </h3>
-            <form class="formcontato__form">
-              <input
-                class="formcontato__input"
-                type="text"
-                id="nome"
-                placeholder="Nome"
-              />
-              <input
-                class="formcontato__input"
-                type="email"
-                id="email"
-                placeholder="Email"
-              />
-              <input
-                class="formcontato__input"
-                type="text"
-                id="assunto"
-                placeholder="Assunto"
-              />
-              <textarea
-                class="formcontato__textarea"
-                rows="5"
-                cols="40"
-                id="mensagem"
-                name="mensagem"
-                placeholder="Sua mensagem"
-              ></textarea>
-              <button id="submitButton" type="submit" disabled class="formcontato__botao">Enviar mensagem</button>
-            </form>
-          </div>
-        </div>
-      </section>
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <p class="footer__text">
+          &copy; 2026 Marcelo Rodrigues. Desenvolvido no desafio Oracle Next Education & Alura.
+        </p>
+        <a href="#hero" class="footer__back-to-top" aria-label="Voltar ao topo da página">
+          ↑ Voltar ao topo
+        </a>
+      </div>
+    </footer>
 
-      <!-- Sessão de Footer/Rodapé-->
-      <section class="footer">
-        <div class="footer__rodape">
-          <p>&copy; 2024 Marcelo Rodrigues. Todos os direitos reservados.</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- Script Linkado do seu documento de JavaScript -->
+    <!-- Script de Validação e Funcionalidades -->
     <script src="validate.js"></script>
   </body>
 </html>
