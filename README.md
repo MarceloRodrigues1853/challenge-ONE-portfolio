@@ -80,3 +80,9 @@ Projeto desenvolvido como parte do **Desafio Challenge Front-End** do programa *
 ## Manutenção
 
 Passo a passo e materiais pendentes: [WORKFLOW.md](WORKFLOW.md).
+
+## Metadados opcionais do GitHub
+
+O botão Consultar atividade no GitHub busca metadados públicos dos seis projetos selecionados, apenas sob demanda. Mostra último push, linguagem principal e arquivamento; preserva todos os cards locais. Não usa token nem dependências. Há timeout de 8 segundos por consulta e intervalo mínimo de 15 segundos entre tentativas; sucesso completo evita novas consultas na mesma visita. Sem JavaScript, o controle permanece oculto e o conteúdo continua acessível.
+
+Validação local: respostas simuladas de sucesso, limite 403, falha de rede, dados inválidos, sucesso parcial e timeout; teclado, temas e larguras 320/375/1440. Consulta real da API validada em 04/10/2026: os seis projetos retornaram metadados, sem erros JavaScript.
