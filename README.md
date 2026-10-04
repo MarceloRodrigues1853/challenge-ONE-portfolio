@@ -24,14 +24,14 @@ Projeto desenvolvido como parte do **Desafio Challenge Front-End** do programa *
 
 ### Pendências de conteúdo e publicação
 
-- Formações e stack atualizadas com o LinkedIn e GitHub; oito selos do Credly com imagens oficiais, emissores, datas e links individuais.
+- Formações e stack atualizadas com o LinkedIn e GitHub; oito selos do Credly e uma certificação Oracle CertView com imagens oficiais, emissores, datas e links individuais.
 - Seis projetos selecionados com decisões documentadas, links de código e demos quando disponíveis. Os três projetos antigos continuam acessíveis.
 - Procedência e limites da verificação estão em [CONTENT_SOURCES.md](CONTENT_SOURCES.md).
 - Os registros antigos da cópia local continuam identificados como pendentes de confirmação.
-- Confirmar especialmente o ano 2024 do Santander Bootcamp 2023, a instituição Proz / AWS e o link antigo do LinkedIn usado no certificado.
+- Alura e DIO tiveram certificados confirmados (01/04/2024, 54h; 04/04/2024, 88h). Oracle OCI 2025 confirmado no CertView, válido até 14/07/2027. CC50 e Proz / AWS ainda precisam de evidência acessível.
 - Verificar nos repositórios as decisões técnicas e a completude dos projetos antes de atribuir selos ou destaques.
 - O versionamento local foi preparado na branch `portfolio-dev-game`, preservando os arquivos locais e o histórico de `origin/main`. O GitHub ainda não recebeu este marco.
-- O envio ao GitHub está pendente da verificação da integração com a Vercel: um push pode disparar publicação automática. Antes de qualquer publicação, identificar e corrigir a divergência entre os destinos.
+- A integração Vercel foi identificada: domínio correto `challenge-one-portfolio-nine.vercel.app`, produção na branch `main`. Push em `main` aciona publicação automática; outras branches podem criar previews. Envio e publicação aguardam autorização explícita.
 - Operações Git de escrita e deploy exigem autorização explícita. Regras completas em `AGENTS.md`.
 
 - **Design 100% Responsivo:** Adaptado com precisão para desktop, tablets e smartphones utilizando CSS Grid, Flexbox e unidades dinâmicas.
@@ -76,3 +76,7 @@ Projeto desenvolvido como parte do **Desafio Challenge Front-End** do programa *
 - **LinkedIn:** [Marcelo Rodrigues](https://www.linkedin.com/in/marcelorodriguesdev1853/)
 - **Credly:** [Selos e certificações](https://www.credly.com/users/marcelo-rodrigues.26e8de27/badges/credly)
 - **Instagram:** [@marcelo180886](https://www.instagram.com/marcelo180886/)
+
+## Manutenção
+
+Passo a passo e materiais pendentes: [WORKFLOW.md](WORKFLOW.md).

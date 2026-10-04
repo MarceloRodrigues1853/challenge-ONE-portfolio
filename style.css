@@ -595,44 +595,23 @@ textarea {
 /* --------------------------------------------------------------------------
    8. SEÇÃO HOBBIES
    -------------------------------------------------------------------------- */
-.hobbies {
-  padding: 64px 0;
-}
+.hobbies { padding: 72px 0; }
+.hobbies__grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px; align-items:start; }
+.hobby-card { background:var(--color-surface); border:1px solid var(--color-border); border-radius:20px; overflow:hidden; transition:border-color .2s,box-shadow .2s; }
+.hobby-card__content { display:flex; flex-direction:column; padding:24px 20px; list-style:none; min-height:280px; }
 
-.hobbies__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 24px;
-}
-
-.hobby-card {
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 24px 16px;
-  text-align: center;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition);
-}
-
-.hobby-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-md);
-}
-
-.hobby-card__icon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  margin: 0 auto 12px auto;
-}
-
-.hobby-card__name {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
+.hobby-card:hover { border-color:var(--color-primary); box-shadow:var(--shadow-md); }
+.hobby-card__number { font-family:monospace; font-size:.75rem; letter-spacing:.07em; color:var(--color-text-muted); }
+.hobby-card__visual { position:relative; display:grid; place-items:center; height:124px; margin:12px 0; color:var(--color-primary); background:radial-gradient(circle, var(--color-surface-hover) 0%,transparent 70%); }
+.hobby-card__visual svg { width:50px;height:50px; z-index:1; transition:transform .25s; }
+.hobby-card__orbit { position:absolute;width:88px;height:88px;border:1px dashed var(--color-border);border-radius:50%;transition:transform .3s; }
+.hobby-card:hover svg { transform:scale(1.12) rotate(-5deg); }
+.hobby-card:hover .hobby-card__orbit { transform:scale(1.14);border-color:var(--color-primary); }
+.hobby-card__name { font-size:1rem;font-weight:700;line-height:1.4; flex:1; }
+@media(max-width:1100px) { .hobbies__grid {grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media(max-width:640px) { .hobbies__grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;} .hobby-card__content {padding:18px 14px;min-height:260px;} .hobby-card__number {font-size:.65rem;} }
+@media(max-width:360px) { .hobbies__grid {grid-template-columns:1fr;} }
+@media(prefers-reduced-motion:reduce) { .hobby-card,.hobby-card * {transition:none!important;} .hobby-card:hover svg {transform:none;} }
 
 /* --------------------------------------------------------------------------
    9. SEÇÃO FORMAÇÃO ACADÊMICA & CERTIFICAÇÕES
@@ -835,14 +814,22 @@ textarea {
   line-height: 1.7;
 }
 
-.contact__image-box {
-  max-width: 320px;
-}
+.contact-panel {border:1px solid var(--color-border);border-radius:18px;background:linear-gradient(135deg,var(--color-primary-light),var(--color-bg));padding:24px;}
+.contact-panel__top {display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--color-text-muted);}
+.contact-panel__label {font: .7rem monospace;letter-spacing:.08em;}
+.contact-panel__top svg {width:40px;height:40px;flex-shrink:0;color:var(--color-primary);}
+.contact-panel__title {font-size:1.3rem;font-weight:700;line-height:1.4;margin:24px 0 12px;}
+.contact-panel__description,.contact-panel__note {font-size:.85rem;line-height:1.6;color:var(--color-text-muted);}
+.contact-panel__links {display:grid;gap:12px;margin:24px 0;}
+.contact-panel__links a {display:flex;align-items:center;gap:12px;border:1px solid var(--color-border);border-radius:12px;padding:14px;background:var(--color-surface);color:var(--color-text);text-decoration:none;transition:border-color .2s,background .2s;}
+.contact-panel__links a:hover {border-color:var(--color-primary);background:var(--color-surface-hover);}
+.contact-panel__links a:focus-visible {outline:3px solid var(--color-primary);outline-offset:3px;}
+.contact-panel__links a>span:nth-child(2) {flex:1;min-width:0;}
+.contact-panel__links strong,.contact-panel__links small {display:block;}
+.contact-panel__links small {font-size:.78rem;color:var(--color-text-muted);overflow-wrap:anywhere;margin-top:4px;}
+.contact-panel__symbol {font-weight:700;font-size:1.1rem;color:var(--color-primary);}
+@media(max-width:640px) {.contact-panel {padding:18px;} .contact-panel__note {display:none;}}
 
-.contact__illustration {
-  width: 100%;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
-}
 
 .contact__form-container {
   width: 100%;
@@ -1220,3 +1207,21 @@ textarea {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Detalhes pessoais: abertura nativa, disponível sem JavaScript. */
+.hobby-card summary {cursor:pointer;list-style:none;}
+.hobby-card summary::-webkit-details-marker {display:none;}
+.hobby-card summary:focus-visible {outline:3px solid var(--color-primary);outline-offset:-5px;border-radius:20px;}
+.hobby-card[open] {border-color:var(--color-primary);}
+.hobby-card__prompt {display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:18px;font-size:.8rem;color:var(--color-text-muted);}
+.hobby-card__plus {font-size:1.3rem;}
+.hobby-card__opened {display:none;}
+.hobby-card[open] .hobby-card__closed {display:none;}
+.hobby-card[open] .hobby-card__opened {display:inline;}
+.hobby-card[open] .hobby-card__plus {transform:rotate(45deg);}
+.hobby-card__detail {padding:20px;border-top:1px solid var(--color-border);font-size:.9rem;line-height:1.7;}
+.hobby-card__tags {display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+.hobby-card__tags span {padding:3px 9px;border:1px solid var(--color-border);border-radius:20px;font-size:.75rem;}
+
+/* O arquivo Oracle tem margens laterais transparentes; centralizar o selo no mesmo quadro. */
+.badge-card img.badge-card__image--oracle { object-fit: cover; object-position: center; }
