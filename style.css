@@ -1225,3 +1225,7 @@ textarea {
 
 /* O arquivo Oracle tem margens laterais transparentes; centralizar o selo no mesmo quadro. */
 .badge-card img.badge-card__image--oracle { object-fit: cover; object-position: center; }
+
+.github-controls:not([hidden]) {display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;}
+.github-controls .source-note {flex:1;min-width:min(100%,240px);margin:0;}
+.github-metadata {border-top:1px solid var(--color-border);padding-top:12px;margin-top:16px;}
