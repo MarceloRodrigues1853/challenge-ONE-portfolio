@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,6 +32,17 @@
       rel="stylesheet"
     />
 
+    <!-- Aplica a escolha salva antes do CSS para evitar troca visual de tema. -->
+    <script>
+      try {
+        const preferredTheme = localStorage.getItem("portfolio_theme");
+        if (["light", "dark"].includes(preferredTheme)) {
+          document.documentElement.dataset.theme = preferredTheme;
+        }
+      } catch {
+        // Sem armazenamento, permanece o tema escuro padrão.
+      }
+    </script>
     <!-- Folha de estilo principal -->
     <link rel="stylesheet" href="style.css" />
   </head>

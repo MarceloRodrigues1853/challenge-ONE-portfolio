@@ -11,15 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcon = document.getElementById("themeIcon");
   const htmlElement = document.documentElement;
 
-  // Verifica preferência salva ou do sistema operacional
+  // Preserva a escolha salva; primeira visita usa o tema escuro.
   let savedTheme;
   try {
     savedTheme = localStorage.getItem("portfolio_theme");
   } catch {
     // Preferências são opcionais quando o armazenamento está indisponível.
   }
-  const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const initialTheme = ["light", "dark"].includes(savedTheme) ? savedTheme : (systemPrefersDark ? "dark" : "light");
+  const initialTheme = ["light", "dark"].includes(savedTheme) ? savedTheme : "dark";
 
   function setTheme(theme) {
     htmlElement.setAttribute("data-theme", theme);
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
-      const currentTheme = htmlElement.getAttribute("data-theme") || "light";
+      const currentTheme = htmlElement.getAttribute("data-theme") || "dark";
       const newTheme = currentTheme === "dark" ? "light" : "dark";
       setTheme(newTheme);
     });

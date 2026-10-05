@@ -1,88 +1,121 @@
-# Portfólio Pessoal — Marcelo Rodrigues
+# Portfólio — Marcelo Rodrigues
 
-Projeto desenvolvido como parte do **Desafio Challenge Front-End** do programa **Oracle Next Education (ONE)** em parceria com a **Alura**, simulando a rotina e os padrões de entrega de um Desenvolvedor Web Front-End e Fullstack.
+Código, lógica e experiências. Meu portfólio reúne projetos, trajetória e certificações em uma interface inspirada em jogos, com acesso direto às informações profissionais.
 
----
+Gosto de conhecer e entender o porquê do que faço e como cada coisa funciona. Este portfólio acompanha meu caminho: aprender, experimentar e explicar as escolhas por trás das soluções.
 
-## 🚀 Demonstração
+**[▶ Explorar o portfólio](https://challenge-one-portfolio-nine.vercel.app/)**
 
-- **Site publicado:** [challenge-one-portfolio-nine.vercel.app](https://challenge-one-portfolio-nine.vercel.app/). A antiga URL `challenge-one-portfolio.vercel.app` exibe o portfólio de outra pessoa. Não usar como referência nem publicar nesse destino.
-- **Repositório GitHub:** [github.com/MarceloRodrigues1853/challenge-ONE-portfolio](https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio)
+[![Prévia do portfólio de Marcelo Rodrigues no tema escuro](assets/portfolio-preview.png)](https://challenge-one-portfolio-nine.vercel.app/)
 
----
+## Escolha sua fase
 
-## ✨ Funcionalidades & Implementações
+Explore em qualquer ordem. Os links levam às seções do site; não há conteúdo bloqueado por progresso.
 
-### Marco 1 — experiência dev game (local)
+- **[01 / Projetos](https://challenge-one-portfolio-nine.vercel.app/#xp)** — código, demos e decisões técnicas de seis projetos selecionados, além de trabalhos anteriores.
+- **[02 / Sobre mim](https://challenge-one-portfolio-nine.vercel.app/#sobremim)** — trajetória, tecnologias e interesses pessoais.
+- **[03 / Formação](https://challenge-one-portfolio-nine.vercel.app/#formacao)** — cursos e certificações com suas fontes, incluindo Oracle Cloud Infrastructure (OCI) Foundations Associate.
+- **[04 / Contato](https://challenge-one-portfolio-nine.vercel.app/#contato)** — e-mail, LinkedIn e formulário.
 
-- Identidade com painel de perfil e paleta azul original; alternância claro/escuro respeitando a preferência salva ou do sistema.
-- Mapa opcional de quatro fases, com progresso de navegação apenas durante a sessão.
-- Acesso direto a Projetos, Sobre, Formação e Contato, sem desbloqueios.
-- Foco visível, link para pular conteúdo, menu com Escape e respeito a movimento reduzido.
-- Conteúdo e navegação disponíveis sem JavaScript; preferências funcionam mesmo sem armazenamento.
-- Nenhuma dependência adicionada. A consulta opcional de metadados GitHub mantém fallback local e foi publicada pelo PR #1.
+## Por dentro da experiência
 
-### Pendências de conteúdo e publicação
+<details>
+<summary>🎮 Navegação por fases e identidade pessoal</summary>
 
-- Formações e stack atualizadas com o LinkedIn e GitHub; oito selos do Credly e uma certificação Oracle CertView com imagens oficiais, emissores, datas e links individuais.
-- Seis projetos selecionados com decisões documentadas, links de código e demos quando disponíveis. Os três projetos antigos continuam acessíveis.
-- Procedência e limites da verificação estão em [CONTENT_SOURCES.md](CONTENT_SOURCES.md).
-- Os registros antigos da cópia local continuam identificados como pendentes de confirmação.
-- Alura e DIO tiveram certificados confirmados (01/04/2024, 54h; 04/04/2024, 88h). Oracle OCI 2025 confirmado no CertView, válido até 14/07/2027. Os três cursos Proz têm documentos conferidos; validação online independente pendente. CC50 é estudo introdutório, sem comprovação, e não bloqueia o portfólio.
-- Verificar nos repositórios as decisões técnicas e a completude dos projetos antes de atribuir selos ou destaques.
-- O versionamento local foi preparado na branch `portfolio-dev-game`, preservando os arquivos locais e o histórico de `origin/main`. O marco inicial e o PR #1 já foram publicados.
-- A integração Vercel foi identificada: domínio correto `challenge-one-portfolio-nine.vercel.app`, produção na branch `main`. Push em `main` aciona publicação automática; outras branches podem criar previews. Novas operações de commit, push, PR, merge e deploy exigem revisão e autorização separadas.
-- Operações Git de escrita e deploy exigem autorização explícita. Regras completas em `AGENTS.md`.
+O mapa de fases é opcional: a navegação direta permanece disponível. O progresso representa apenas as seções visitadas durante a sessão, sem pontuação profissional ou desbloqueios.
 
-- **Design 100% Responsivo:** Adaptado com precisão para desktop, tablets e smartphones utilizando CSS Grid, Flexbox e unidades dinâmicas.
-- **Dark Mode & Light Mode:** Suporte a alternância de temas com persistência da preferência no `localStorage` e detecção automática do tema do sistema operacional (`prefers-color-scheme`).
-- **Validação em Tempo Real:** Validação nos campos de nome, e-mail, assunto e mensagem com feedback visual e mensagens acessíveis (`aria-live`).
-- **Contador Dinâmico de Caracteres:** Contador para o campo de mensagem (máximo 300 caracteres).
-- **Envio Real de Formulário:** Integração direta via AJAX com o FormSubmit para envio direto de mensagens para a caixa de e-mail, com estados de carregamento (*loading*) e confirmação de sucesso.
-- **Navegação Suave & Menu Mobile:** Navegação por âncoras fluida e menu hamburguer otimizado para dispositivos móveis.
-- **Acessibilidade:** Semântica HTML, foco visível, navegação por teclado e movimento reduzido; não representa uma auditoria completa de conformidade WCAG.
+Os cards de interesses revelam um pouco da minha história ao serem expandidos. Temas claro e escuro mantêm a identidade azul. A primeira visita começa no tema escuro; uma escolha anterior do visitante é preservada quando o armazenamento está disponível.
 
----
+</details>
 
-## 🛠️ Tecnologias Utilizadas
+<details>
+<summary>⚡ Projetos úteis mesmo quando a API falha</summary>
 
-- **HTML5:** Estruturação semântica, metatags Open Graph para SEO e redes sociais.
-- **CSS3 Moderno:** Custom Properties (variáveis CSS), Flexbox, CSS Grid, animações e media queries.
-- **JavaScript (ES6+):** Manipulação de DOM assíncrona, Fetch API, eventos em tempo real e Web Storage API.
+Os cards trazem conteúdo local, links de código, demos quando disponíveis e decisões técnicas documentadas.
 
----
+A consulta de atividade no GitHub é opcional e ocorre sob demanda. Ela mostra último push, linguagem principal e arquivamento, sem tokens no frontend. Falhas de rede, timeout ou limites da API não removem os projetos.
 
-## 💻 Como Rodar o Projeto Localmente
+</details>
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio.git
-   ```
+<details>
+<summary>⌨️ Acessibilidade e uso em diferentes telas</summary>
 
-2. Acesse a pasta do projeto:
-   ```bash
-   cd challenge-ONE-portfolio
-   ```
+- Layout adaptado a celular e desktop.
+- Navegação por teclado, foco visível, link para pular conteúdo e fechamento do menu com Escape.
+- Respeito à preferência por movimento reduzido.
+- Conteúdo disponível sem JavaScript; contato por e-mail e LinkedIn nessa condição.
 
-3. Abra o arquivo `index.html` no seu navegador ou utilize a extensão **Live Server** do VS Code:
-   - Clique com o botão direito em `index.html` > **Open with Live Server**.
+Esses recursos não representam uma auditoria completa de conformidade WCAG.
 
----
+</details>
 
-## 👨‍💻 Autor
+<details>
+<summary>✉️ Canais de contato e formulário</summary>
 
-- **Nome:** Marcelo Rodrigues
-- **GitHub:** [@MarceloRodrigues1853](https://github.com/MarceloRodrigues1853)
-- **LinkedIn:** [Marcelo Rodrigues](https://www.linkedin.com/in/marcelorodriguesdev1853/)
-- **Credly:** [Selos e certificações](https://www.credly.com/users/marcelo-rodrigues.26e8de27/badges/credly)
-- **Instagram:** [@marcelo180886](https://www.instagram.com/marcelo180886/)
+E-mail e LinkedIn oferecem acesso direto. O formulário usa JavaScript, validação de campos, contador de caracteres e integração com FormSubmit, com mensagens de carregamento, sucesso e erro.
 
-## Manutenção
+Sem JavaScript, a seção orienta o uso dos links diretos. O envio depende da disponibilidade do serviço externo.
 
-Passo a passo e materiais pendentes: [WORKFLOW.md](WORKFLOW.md).
+</details>
 
-## Metadados opcionais do GitHub
+<details>
+<summary>🧭 Por que construí o portfólio dessa forma?</summary>
 
-O botão Consultar atividade no GitHub busca metadados públicos dos seis projetos selecionados, apenas sob demanda. Mostra último push, linguagem principal e arquivamento; preserva todos os cards locais. Não usa token nem dependências. Há timeout de 8 segundos por consulta e intervalo mínimo de 15 segundos entre tentativas; sucesso completo evita novas consultas na mesma visita. Sem JavaScript, o controle permanece oculto e o conteúdo continua acessível.
+- **HTML, CSS e JavaScript nativos:** mantêm esta interface estática sem instalação de pacotes ou etapa de build.
+- **Game opcional:** a identidade visual convida à exploração, enquanto os links diretos facilitam encontrar as informações profissionais.
+- **Conteúdo local e API sob demanda:** as informações essenciais não dependem de uma consulta remota funcionar.
+- **Fontes individuais para credenciais:** permitem consultar a procedência e distinguir informações verificadas de pendências.
+- **Tema escuro inicial, escolha preservada:** expressa minha preferência visual e mantém o tema claro disponível para quem preferir.
 
-Validação local: respostas simuladas de sucesso, limite 403, falha de rede, dados inválidos, sucesso parcial e timeout; teclado, temas e larguras 320/375/1440. Consulta real da API validada em 04/10/2026: os seis projetos retornaram metadados, sem erros JavaScript.
+</details>
+
+<details>
+<summary>🌓 Comparar as prévias dos temas</summary>
+
+### Tema escuro — padrão na primeira visita
+
+![Portfólio no tema escuro](assets/portfolio-preview.png)
+
+### Tema claro — opção do visitante
+
+![Portfólio no tema claro](assets/portfolio-preview-light.png)
+
+Capturas da versão local. O seletor de tema funciona no site; estas imagens são prévias estáticas.
+
+</details>
+
+## Stack deste portfólio
+
+**HTML · CSS · JavaScript** — sem instalação de pacotes ou etapa de build.
+
+HTML semântico, CSS Grid, Flexbox e variáveis CSS compõem a interface. JavaScript cuida das interações, preferências e consultas via Fetch API.
+
+## Execute localmente
+
+Para uma nova cópia:
+
+```bash
+git clone https://github.com/MarceloRodrigues1853/challenge-ONE-portfolio.git
+cd challenge-ONE-portfolio
+```
+
+No VS Code, abra `index.html` com **Open with Live Server**. Também é possível abrir o arquivo diretamente no navegador para explorar o conteúdo estático.
+
+<details>
+<summary>📂 Explorar a estrutura do projeto</summary>
+
+- `index.html`: conteúdo e estrutura semântica.
+- `style.css`: layout, temas e responsividade.
+- `validate.js`: tema, navegação e validação do formulário.
+- `github-projects.js`: consulta opcional de metadados dos projetos.
+- `assets/`: imagens, logos, selos e prévia do portfólio.
+
+</details>
+
+## Autor e documentação
+
+**Marcelo Rodrigues** — [GitHub](https://github.com/MarceloRodrigues1853) · [LinkedIn](https://www.linkedin.com/in/marcelorodriguesdev1853/) · [Credly](https://www.credly.com/users/marcelo-rodrigues.26e8de27/badges/credly)
+
+O projeto começou no desafio de portfólio do programa Oracle Next Education (ONE), em parceria com a Alura, e evoluiu para esta experiência pessoal.
+
+[Documentação técnica e manutenção](DOCS.md) · [Fontes e limites de verificação do conteúdo](CONTENT_SOURCES.md)
