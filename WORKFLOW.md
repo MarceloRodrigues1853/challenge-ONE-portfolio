@@ -1,27 +1,23 @@
-# Como continuar o portfólio
+# Fluxo de manutenção do portfólio
 
-## Revisar conteúdo
+## Revisão de conteúdo
 
-1. Consultar AGENTS.md e apenas a seção relevante de CONTENT_SOURCES.md.
-2. Abrir a credencial individual ou README e arquivos que sustentam a descrição; não inferir dados de logos ou títulos.
-3. Conferir titular, título, emissor, conclusão e horas quando publicados. Registrar URL, data da consulta e limite da verificação.
-4. Atualizar index.html e a seção correspondente de CONTENT_SOURCES.md. Se faltar evidência, manter aviso específico.
-5. Validar HTML, assets, links locais e visual em desktop/mobile. Alterações de interação também exigem teclado, temas, movimento reduzido e ausência de JavaScript.
-6. Mostrar arquivos alterados e pendências. Git add/commit/push e deploy dependem de autorização explícita para a etapa.
+1. Consultar [AGENTS.md](AGENTS.md) e a seção relevante de [CONTENT_SOURCES.md](CONTENT_SOURCES.md).
+2. Conferir a credencial individual, README ou código que sustenta cada informação. Distinguir formação, certificação e experiência prática.
+3. Registrar fontes, datas e limites da verificação em CONTENT_SOURCES.md. Não duplicar as pendências nos demais documentos.
+4. Atualizar o conteúdo local preservando informações úteis sem JavaScript ou API.
+5. Validar os pontos afetados conforme o checklist em [DOCS.md](DOCS.md).
+6. Apresentar diff, arquivos, validações e pendências para revisão antes de versionar.
 
-## Materiais que Marcelo pode fornecer
+## Revisão de publicação
 
-- Oracle OCI Foundations Associate 2025: resolvido em 02/10/2026 com link público Oracle CertView; emissão e validade conferidas e selo adicionado.
-- Proz: documentos legíveis e links dos três cursos recebidos em 02/10/2026; períodos e horas conferidos. Não é necessário reenviar. Validação online independente dos destinos permanece pendente.
-- CC50: mantido como estudo introdutório, por decisão do titular. Recuperar comprovante é opcional e não bloqueia os próximos marcos. Link legado retornou 403; não está exposto como credencial verificável.
-- Alura Play: confirmar se a demo abre no seu navegador; a consulta automatizada encontrou falha SSL, sem comprovar indisponibilidade geral.
+1. Conferir branch de trabalho e destino do envio.
+2. Revisar e autorizar separadamente commit, push, PR e merge, incluindo os efeitos de preview ou publicação automática.
+3. Conferir os checks e a prévia do commit atual antes do merge.
+4. Após a publicação, conferir o site em produção e os comportamentos alterados.
 
-## Próximo marco: GitHub dinâmico
+O destino e os detalhes técnicos estão em DOCS.md; as regras de autorização estão em AGENTS.md. Não alterar credenciais nem configurações de produção durante esse fluxo.
 
-Manter os cards locais como fonte editorial e fallback. Buscar metadados públicos apenas quando útil, sem token no frontend. Tratar timeout, erros e limites; cache deve ser opcional. Não substituir descrições verificadas por conteúdo remoto sem revisão. Validar rede indisponível, resposta inválida e limite da API.
+## Ferramentas locais
 
-## Publicação futura
-
-Destino identificado: challenge-one-portfolio-nine.vercel.app, projeto challenge-one-portfolio da equipe Marcelo Rodrigues' projects. Produção acompanha main; painel mostrou commit 45b75e6 de 14/04/2024. O domínio sem “-nine” exibe outra pessoa e continua proibido.
-
-Antes de enviar, revisar diff, pendências, destino e comportamento automático. Push em main publica; push em outra branch pode criar preview. Pedir autorização que inclua o envio e o efeito de publicação. Não desconectar integração nem modificar produção para contornar essa condição.
+A skill em `.codex/skills/revisar-conteudo-portfolio/` é um recurso opcional de apoio à revisão, sem participação no funcionamento do site. Deve permanecer local, fora do versionamento. Este documento e as fontes registradas permitem manter o projeto mesmo sem a skill.
