@@ -31,8 +31,8 @@ Links das três demos foram obtidos dos READMEs. A disponibilidade atual não fo
 - CC50/Fundação Estudar: o PDF público retornou HTTP 403 nesta consulta; data e conteúdo ainda pendentes. Extensão FrontEnd/Proz: dados conferidos na imagem enviada pelo titular; link antigo substituído pelo destino impresso. Verificação online pendente. Suporte em TI possui evidência no Credly; registro legado preservado.
 - Oracle OCI 2025: pendência resolvida pelo link individual do Oracle CertView fornecido pelo titular; selo e datas adicionados.
 - Os três projetos antigos tiveram descrições revisadas pelo README e código público em 02/10/2026. Número Secreto e Memória responderam HTTP 200; Alura Play falhou na conexão SSL pelo cliente de consulta, sem conclusão sobre indisponibilidade geral. Funcionalidade completa não testada.
-- Integração dinâmica com GitHub fica para outro marco. Todo o conteúdo desta etapa é local e continua disponível sem API ou JavaScript.
-- Nenhuma alteração no GitHub, LinkedIn, Credly, credenciais ou produção. O destino correto foi identificado no painel: challenge-one-portfolio-nine.vercel.app, conectado a este repositório, produção em main/45b75e6. Push em main publica automaticamente; outras branches podem gerar previews. Não enviar sem autorização específica.
+- Consulta opcional GitHub publicada no PR #1; cards locais permanecem disponíveis sem API ou JavaScript.
+- Estado atualizado em 05/10/2026: PR #1 mesclado em 04/10/2026, commit de merge e835ee4. Site publicado em challenge-one-portfolio-nine.vercel.app e consulta dos seis projetos validada em produção. LinkedIn, Credly e credenciais não foram alterados. Push em main publica automaticamente; outras branches podem gerar previews. Não enviar sem autorização específica.
 
 ## Revisão do marco de conteúdo — 02/10/2026
 
