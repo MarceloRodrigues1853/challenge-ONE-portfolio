@@ -60,3 +60,7 @@ Links das três demos foram obtidos dos READMEs. A disponibilidade atual não fo
 - Consulta dos novos links por ferramenta web não conseguiu acessar o conteúdo; isso não comprova indisponibilidade geral. Os dados acima se baseiam nos documentos legíveis enviados pelo titular; links ainda aguardam verificação online independente. Links de saída LinkedIn foram substituídos pelos destinos fornecidos, sem parâmetros de rastreamento.
 
 - Decisão do titular sobre CC50: manter como estudo introdutório da Fundação Estudar, baseado no CS50 de Harvard, sem destaque entre certificações verificadas. Data 2023 não confirmada retirada do card; link legado preservado apenas no histórico documental. Recuperação do comprovante não bloqueia o próximo marco.
+
+## Ajuste de stack — 05/10/2026
+
+- Oracle Cloud Infrastructure (OCI) incluído no card Cloud & DevOps com base na certificação Foundations Associate já documentada acima. A menção representa formação em fundamentos, sem atribuir experiência em produção ou nível avançado.
