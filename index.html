@@ -41,7 +41,7 @@
     <header class="header">
       <div class="header__container">
         <a href="#hero" class="header__logo" aria-label="Voltar ao início">
-          <img src="assets/vector.png" alt="Ícone M R" class="header__logo-img" />
+          <img src="assets/vector.png" alt="Ícone M R" class="header__logo-img" width="22" height="22" />
           <span class="header__logo-text">Marcelo Rodrigues</span>
         </a>
 
@@ -155,7 +155,7 @@
               <img
                 src="assets/foto_perfil_atualizada.jpeg"
                 alt="Foto de perfil de Marcelo Rodrigues"
-                class="hero__avatar"
+                class="hero__avatar" width="1254" height="1254" fetchpriority="high" decoding="async"
               />
             </div>
             <p class="profile-caption">Marcelo Rodrigues <span>Back-end Júnior · Ciência da Computação</span></p>
@@ -213,7 +213,7 @@
           <div class="skills__grid"><article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">01</span><h3 class="skill-card__name">Backend</h3><p class="stack-card__tools">Go · Java · Node.js · Express · Spring Boot</p><p class="skill-card__level">APIs REST, regras de negócio e arquitetura em camadas</p></article>
 <article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">02</span><h3 class="skill-card__name">Frontend</h3><p class="stack-card__tools">React · TypeScript · JavaScript · HTML · CSS · Vite</p><p class="skill-card__level">Interfaces e integração com APIs</p></article>
 <article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">03</span><h3 class="skill-card__name">Dados</h3><p class="stack-card__tools">PostgreSQL · MySQL · TiDB Cloud · SQL</p><p class="skill-card__level">Persistência relacional e consultas parametrizadas</p></article>
-<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">04</span><h3 class="skill-card__name">Cloud & DevOps</h3><p class="stack-card__tools">AWS · Google Cloud · Docker · Linux · GitHub Actions</p><p class="skill-card__level">Containers, serviços de nuvem e CI/CD</p></article>
+<article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">04</span><h3 class="skill-card__name">Cloud & DevOps</h3><p class="stack-card__tools">Oracle Cloud Infrastructure (OCI) · AWS · Google Cloud · Docker · Linux · GitHub Actions</p><p class="skill-card__level">Containers, serviços de nuvem e CI/CD</p></article>
 <article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">05</span><h3 class="skill-card__name">IA aplicada</h3><p class="stack-card__tools">Python · CrewAI · Gemini · LangGraph · RAG</p><p class="skill-card__level">Agentes e recuperação de evidências documentais</p></article>
 <article class="skill-card stack-card"><span class="stack-card__number" aria-hidden="true">06</span><h3 class="skill-card__name">Segurança & qualidade</h3><p class="stack-card__tools">OAuth 2.0 · OpenID Connect · JWT · Testes · Prometheus</p><p class="skill-card__level">Autenticação, testes e observabilidade</p></article></div>
           <p class="source-note">Fontes: <a href="https://www.linkedin.com/in/marcelorodriguesdev1853/" target="_blank" rel="noopener noreferrer" class="source-link">LinkedIn</a> e <a href="https://github.com/MarceloRodrigues1853/MarceloRodrigues1853/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="source-link">perfil no GitHub</a>.</p>
@@ -407,7 +407,7 @@
             <!-- CC50 -->
             <div class="academic-card">
               <div class="academic-card__logo-wrapper">
-                <img src="assets/FE.png" alt="Logo Fundação Estudar" class="academic-card__logo" />
+                <img src="assets/FE.png" alt="Logo Fundação Estudar" class="academic-card__logo" loading="lazy" decoding="async" />
               </div>
               <div class="academic-card__content">
                 <h3 class="academic-card__title">CC50 — Introdução à Ciência da Computação</h3>
@@ -419,7 +419,7 @@
             <!-- ONE Alura -->
             <div class="academic-card">
               <div class="academic-card__logo-wrapper">
-                <img src="assets/logotipo-ONE1.svg" alt="Logo Oracle Next Education" class="academic-card__logo" />
+                <img src="assets/logotipo-ONE1.svg" alt="Logo Oracle Next Education" class="academic-card__logo" loading="lazy" decoding="async" />
               </div>
               <div class="academic-card__content">
                 <h3 class="academic-card__title">
@@ -439,7 +439,7 @@
             <!-- Proz AWS -->
             <div class="academic-card">
               <div class="academic-card__logo-wrapper">
-                <img src="assets/Proz.png" alt="Logo Proz" class="academic-card__logo" />
+                <img src="assets/Proz.png" alt="Logo Proz" class="academic-card__logo" loading="lazy" decoding="async" />
               </div>
               <div class="academic-card__content">
                 <h3 class="academic-card__title">
@@ -460,7 +460,7 @@
             <!-- DIO Java -->
             <div class="academic-card">
               <div class="academic-card__logo-wrapper">
-                <img src="assets/logo-full.svg" alt="Logo DIO" class="academic-card__logo" />
+                <img src="assets/logo-full.svg" alt="Logo DIO" class="academic-card__logo" loading="lazy" decoding="async" />
               </div>
               <div class="academic-card__content">
                 <h3 class="academic-card__title">
@@ -480,7 +480,7 @@
             <!-- Coursera Google TI -->
             <div class="academic-card">
               <div class="academic-card__logo-wrapper">
-                <img src="assets/cursera.svg" alt="Logo Coursera" class="academic-card__logo" />
+                <img src="assets/cursera.svg" alt="Logo Coursera" class="academic-card__logo" loading="lazy" decoding="async" />
               </div>
               <div class="academic-card__content">
                 <h3 class="academic-card__title">
@@ -853,6 +853,7 @@
             </div>
 
             <div class="contact__form-container">
+              <noscript><style>#contactForm { display: none; }</style><p class="source-note">Para enviar uma mensagem sem JavaScript, use os links de e-mail ou LinkedIn nesta seção.</p></noscript>
               <form class="contact-form" id="contactForm" novalidate>
                 <!-- Campo Nome -->
                 <div class="form-group">
@@ -862,6 +863,7 @@
                     type="text"
                     id="name"
                     name="name"
+                    autocomplete="name"
                     placeholder="Ex: Seu Nome"
                     required
                     maxlength="50"
@@ -877,6 +879,7 @@
                     type="email"
                     id="email"
                     name="email"
+                    autocomplete="email"
                     placeholder="seu.email@exemplo.com"
                     required
                   />
