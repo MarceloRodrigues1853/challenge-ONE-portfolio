@@ -2,19 +2,19 @@
 
 ## Guias do projeto
 
-- [WORKFLOW.md](WORKFLOW.md): fluxo de revisão, materiais pendentes e publicação.
+- [WORKFLOW.md](WORKFLOW.md): fluxo de revisão de conteúdo e publicação.
 - [CONTENT_SOURCES.md](CONTENT_SOURCES.md): fontes individuais, evidências e limites das verificações.
 - [AGENTS.md](AGENTS.md): regras de trabalho e autorização das operações.
 
 ## Publicação e revisão
 
-O destino correto é https://challenge-one-portfolio-nine.vercel.app/. A URL challenge-one-portfolio.vercel.app exibe outro portfólio e não deve ser usada como referência ou destino.
+O endereço oficial do portfólio é [challenge-one-portfolio-nine.vercel.app](https://challenge-one-portfolio-nine.vercel.app/).
 
 A produção acompanha a branch main; envios em outras branches podem gerar previews. Preparar alterações locais, revisar o diff e validar antes de versionar. Commit, push, criação de PR, merge e deploy exigem autorizações específicas e separadas, incluindo o efeito de publicação automática quando aplicável. Não alterar credenciais nem configurações de produção.
 
 ## Conteúdo e credenciais
 
-Manter links individuais e procedência. Não atribuir experiência, métricas ou níveis de proficiência a partir de certificados. As pendências detalhadas ficam em CONTENT_SOURCES.md e WORKFLOW.md, evitando duplicá-las no README.
+Manter links individuais e procedência. Não atribuir experiência, métricas ou níveis de proficiência a partir de certificados. As pendências detalhadas ficam em CONTENT_SOURCES.md, evitando duplicá-las nos demais documentos.
 
 ## Contato
 
