@@ -128,3 +128,21 @@ Links das três demos foram obtidos dos READMEs. A disponibilidade atual não fo
 ## Canais profissionais — 27/10/2026
 
 - Por solicitação do titular, removido o acesso ao Instagram do portfólio e da lista de contatos aceitos pela integração dinâmica. Mantidos GitHub, LinkedIn e e-mail. Prévias do README atualizadas para refletir a navegação atual. Nenhuma alteração na conta Instagram.
+
+## Vitrine Jogos — 27/10/2026
+
+- Repositórios públicos consultados via GitHub REST. Mantidos Número Secreto e Memória com as evidências anteriores. Alura Play permanece em Projetos por ser uma interface, não um jogo.
+- [Detona Ralph](https://github.com/MarceloRodrigues1853/Desafio-Detona-RalphJs): README e src/scripts/engine.js conferidos; início por botão, temporizador de 60 segundos, pontuação por mousedown e sons. Não foi prometida velocidade progressiva: código consultado usa intervalo fixo.
+- [Simulador de Piano](https://github.com/MarceloRodrigues1853/simulador-piano): README e src/scripts/engine.js conferidos; clique e keydown disparam notas. changeVolume cria um novo Audio em vez de atualizar o áudio usado por playTune: candidato concreto a revisão, sem correção neste repositório.
+- [JoKenPo](https://github.com/MarceloRodrigues1853/yugioh-jo-ken-po): README e src/scripts/engine.js conferidos; três cartas com relações de vitória/derrota, seleção por clique, sorteio do computador e placar. Evoluções citadas no README permanecem futuras.
+- As demos indicadas nos READMEs responderam HTTP 200 e títulos compatíveis em 27/10/2026. Essa verificação não equivale a uma partida completa nem auditoria de áudio, acessibilidade ou mobile.
+- [Jogo da Velha Java](https://github.com/MarceloRodrigues1853/JogoDaVelha-Java): descrição baseada no README, projeto em equipe Ada para console, JDK 21. Sem demo web; não foi executado nem auditado integralmente. Link para execução é do repositório.
+- [Scratch](https://github.com/MarceloRodrigues1853/meu-projeto-scratch): README mínimo e arquivo Jogo - pong.sb3. Não incluído na vitrine por falta de link público e descrição verificável mais completa.
+- Capas dos três novos experimentos web e do jogo Java são ilustrações tipográficas em HTML/CSS, não capturas das demos. Não foram acrescentadas dependências, embeds, áudio automático ou código remoto ao site.
+
+## Piano Virtual publicado — atualização da vitrine
+
+- PR https://github.com/MarceloRodrigues1853/simulador-piano/pull/3 confirmado mesclado; commit a49893d7299d5a7cf00538e4e6a0a6f6ef5bf92b. Descrição do PR registra 23 testes com simulações de página, áudio e temporizadores; não reexecutados nesta revisão do portfólio.
+- Interface pública consultada em https://marcelorodrigues1853.github.io/simulador-piano/: controles de áudio, treino de oito toques sem cronômetro e tutorial ouvir/praticar. Removido aviso de volume em revisão, que descrevia uma versão anterior.
+- Capa real em assets/jogo-piano.png capturada da cópia local em C:/Projetos/Jogos/Simulador-piano, compatível visualmente com a interface pública observada. Não representa uma nova auditoria de equivalência integral de arquivos.
+- Partitura, repertório, desafios de ritmo e fases permanecem planos futuros. Nenhum áudio ou jogo incorporado automaticamente ao portfólio.
