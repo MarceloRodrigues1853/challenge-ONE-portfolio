@@ -6,7 +6,7 @@ Gosto de conhecer e entender o porquê do que faço e como cada coisa funciona. 
 
 **[▶ Explorar o portfólio](https://challenge-one-portfolio-nine.vercel.app/)**
 
-[![Prévia do portfólio de Marcelo Rodrigues no tema escuro](assets/portfolio-preview.png)](https://challenge-one-portfolio-nine.vercel.app/)
+[![Prévia do portfólio de Marcelo Rodrigues no tema escuro](assets/portfolio-inicio-com-jogos.png)](https://challenge-one-portfolio-nine.vercel.app/)
 
 ## Escolha sua fase
 
@@ -85,11 +85,11 @@ Sem JavaScript, a seção orienta o uso dos links diretos. O envio depende da di
 
 ### Tema escuro — padrão na primeira visita
 
-![Portfólio no tema escuro](assets/portfolio-preview.png)
+![Portfólio no tema escuro](assets/portfolio-inicio-com-jogos.png)
 
 ### Tema claro — opção do visitante
 
-![Portfólio no tema claro](assets/portfolio-preview-light.png)
+![Portfólio no tema claro](assets/portfolio-inicio-com-jogos-claro.png)
 
 Capturas da versão local. O seletor de tema funciona no site; estas imagens são prévias estáticas.
 
