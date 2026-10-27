@@ -1164,7 +1164,7 @@ textarea {
 .badges__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .badge-card { display: flex; align-items: flex-start; gap: 20px; padding: 24px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
 .badge-card img { flex-shrink: 0; width: 96px; height: 96px; object-fit: contain; }
-.badge-card h4 { font-size: 1rem; line-height: 1.5; overflow-wrap: anywhere; }
+.badge-card :is(h4, h5) { font-size: 1rem; line-height: 1.5; overflow-wrap: anywhere; }
 .badge-card p { font-size: .8rem; margin: 8px 0; color: var(--color-text-muted); }
 .content-details { margin-top: 32px; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 24px; }
 .content-details > summary { cursor: pointer; font-weight: 700; }
@@ -1231,3 +1231,23 @@ textarea {
 .github-controls:not([hidden]) {display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;}
 .github-controls .source-note {flex:1;min-width:min(100%,240px);margin:0;}
 .github-metadata {border-top:1px solid var(--color-border);padding-top:12px;margin-top:16px;}
+
+/* Certificações: destaques editoriais e navegação por plataforma. */
+.credential-highlights { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin:24px 0; }
+.credential-highlights a { display:flex; flex-direction:column; gap:12px; padding:20px; border:1px solid var(--color-border); border-top:3px solid var(--color-primary); border-radius:var(--radius-md); background:var(--color-surface); text-decoration:none; }
+.credential-highlights a:hover { border-color:var(--color-primary); }
+.credential-highlights span { font-size:.8rem; color:var(--color-text-muted); }
+.credential-highlights strong { font-size:1rem; line-height:1.5; }
+.credential-platform-nav { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 32px; }
+.credential-platform-nav a { padding:8px 14px; border:1px solid var(--color-border); border-radius:var(--radius-full); background:var(--color-surface); font-size:.85rem; text-decoration:none; }
+.credential-platform-nav a:hover { border-color:var(--color-primary); }
+.credential-platform { margin-top:40px; scroll-margin-top:100px; }
+.credential-platform > h4 { font-size:1.25rem; }
+.badge-card[id] { scroll-margin-top:100px; }
+@media (max-width:992px) { .credential-highlights { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:480px) { .credential-highlights { grid-template-columns:1fr; } }
+
+/* Logos de plataforma identificam a origem; não representam selos individuais. */
+.academic-card__logo-wrapper--platform { background:#fff; border:1px solid var(--color-border); }
+.academic-card__logo-wrapper--platform img { width:100%; height:100%; object-fit:contain; }
+@media (max-width:480px) { .credential-platform .academic-card { gap:12px; padding:16px; } .academic-card__logo-wrapper--platform { width:44px; height:44px; } }
