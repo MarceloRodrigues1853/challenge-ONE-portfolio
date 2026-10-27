@@ -59,6 +59,7 @@
         <nav class="nav" id="mainNav" aria-label="Navegação Principal">
           <ul class="nav__list">
             <li class="nav__item"><a href="#xp" class="nav__link">Projetos</a></li>
+            <li class="nav__item"><a href="#jogos" class="nav__link nav__link--games"><span aria-hidden="true">▶</span> Jogos</a></li>
             <li class="nav__item"><a href="#sobremim" class="nav__link">Sobre mim</a></li>
             <li class="nav__item"><a href="#formacao" class="nav__link">Formação</a></li>
             <li class="nav__item nav__item--cta">
@@ -172,9 +173,10 @@
                 <li><a href="#sobremim" data-phase="sobremim"><span class="phase-number">02</span><strong>Sobre</strong><span>Conheça minha trajetória</span><span class="phase-status">Visitar fase</span></a></li>
                 <li><a href="#formacao" data-phase="formacao"><span class="phase-number">03</span><strong>Formação</strong><span>Confira cursos e certificados</span><span class="phase-status">Visitar fase</span></a></li>
                 <li><a href="#contato" data-phase="contato"><span class="phase-number">04</span><strong>Contato</strong><span>Vamos conversar</span><span class="phase-status">Visitar fase</span></a></li>
+                <li><a href="#jogos" data-phase="jogos"><span class="phase-number">05</span><strong>Jogos</strong><span>Faça uma pausa no código</span><span class="phase-status">Visitar fase</span></a></li>
               </ol>
             </nav>
-            <p id="journeyProgress" class="journey__progress" role="status" hidden>0 de 4 fases visitadas nesta sessão.</p>
+            <p id="journeyProgress" class="journey__progress" role="status" hidden>0 de 5 fases visitadas nesta sessão.</p>
             <p class="journey__note">As fases representam seções do site. O progresso de exploração não representa certificações ou conquistas profissionais.</p>
           </div>
         </details>
@@ -834,6 +836,60 @@
         </div>
       </section>
 
+<section class="games" id="jogos" aria-labelledby="gamesTitle"><div class="container"><div class="games__intro"><div><span class="section-tag">PLAY / Uma pausa no código</span><h2 class="section-title" id="gamesTitle">Escolha um jogo. Faça uma pausa.</h2><p class="games__description">Entre uma ideia e outra, também tem espaço para brincar. Explore meus jogos de estudo e um experimento musical — sem cadastro e sem fases para desbloquear.</p></div><div class="games__emblem" aria-hidden="true"><svg viewBox="0 0 100 64" fill="none" stroke="currentColor" stroke-width="4"><path d="M26 10h48c12 0 20 35 18 42-2 9-14 10-21-4H29C22 62 10 61 8 52 6 45 14 10 26 10Z"/><path d="M24 28v16m-8-8h16"/><circle cx="72" cy="29" r="3"/><circle cx="81" cy="39" r="3"/></svg><span>PAUSA NO CÓDIGO</span></div></div><p class="source-note">Os jogos web abrem em outra aba e alguns têm sons. O Jogo da Velha roda no terminal. São projetos educacionais; a revisão de acessibilidade e a evolução de cada jogo serão feitas em etapas.</p><div id="gameFilters" class="game-filters" role="group" aria-label="Filtrar jogos por tipo" hidden><button type="button" data-game-filter="todos" aria-pressed="true">Todos</button><button type="button" data-game-filter="logica" aria-pressed="false">Lógica</button><button type="button" data-game-filter="reflexos" aria-pressed="false">Reflexos</button><button type="button" data-game-filter="musica" aria-pressed="false">Música</button></div><p id="gameFilterStatus" class="source-note" role="status" hidden></p><div class="projects__grid" id="gamesGrid"><article class="project-card game-card" data-game-category="logica">
+              <div class="project-card__image-container">
+                <img src="assets/jogo-numeo-secreto.jpeg" alt="Screenshot do Jogo do Número Secreto" class="project-card__image" loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Lógica</span>
+                  <span class="tag">HTML/CSS</span>
+                </div>
+                <h3 class="project-card__title">Jogo do Número Secreto</h3>
+                <p class="project-card__description">
+                  Jogo de adivinhação entre 1 e 10, com contagem de tentativas e síntese de voz via ResponsiveVoice,
+                  criada no módulo de Lógica de Programação da Alura/Oracle ONE.
+                </p>
+                <div class="project-card__actions">
+                  <a href="https://github.com/MarceloRodrigues1853/jogo-numero-secretoAlura" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                    Repositório
+                  </a>
+                  <a href="https://jogo-numero-secreto-alura-snowy.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                    Jogar ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+<article class="project-card game-card" data-game-category="logica">
+              <div class="project-card__image-container">
+                <img src="assets/jogo-da-memoria.jpeg" alt="Screenshot do Jogo da Memória" class="project-card__image" loading="lazy">
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__tags">
+                  <span class="tag">JavaScript Moderno</span>
+                  <span class="tag">CSS Animations</span>
+                  <span class="tag">DOM</span>
+                </div>
+                <h3 class="project-card__title">Jogo da Memória com Emojis</h3>
+                <p class="project-card__description">
+                  Desafio de estudo da DIO com JavaScript puro: cria cartas no DOM, compara pares,
+                  conta tentativas e calcula pontuação pelo tempo, com sons e transições 3D em CSS.
+                </p>
+                <div class="project-card__actions">
+                  <a href="https://github.com/MarceloRodrigues1853/Jogo-da-memoria-com-Emojis" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                    Repositório
+                  </a>
+                  <a href="https://marcelorodrigues1853.github.io/Jogo-da-memoria-com-Emojis/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                    Jogar ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+<article class="project-card game-card" data-game-category="reflexos"><div class="game-cover" aria-hidden="true"><span>REFLEXOS</span><strong>◎</strong><span>EXPERIMENTO WEB</span></div><div class="project-card__body"><div class="project-card__tags"><span class="tag">Reflexos</span><span class="tag">JavaScript</span></div><h3 class="project-card__title">Detona Ralph</h3><p class="project-card__description">Acerte o personagem que aparece no tabuleiro antes do tempo acabar. Projeto de estudo da DIO com pontuação e sons.</p><p class="project-note">Demo web · clique no tabuleiro; acessibilidade será revisada.</p><div class="project-card__actions"><a class="btn btn--outline" href="https://github.com/MarceloRodrigues1853/Desafio-Detona-RalphJs" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório de Detona Ralph (nova aba)">Código ↗</a><a class="btn btn--primary" href="https://marcelorodrigues1853.github.io/Desafio-Detona-RalphJs/" target="_blank" rel="noopener noreferrer" aria-label="Jogar Detona Ralph (nova aba)">Jogar ↗</a></div></div></article>
+<article class="project-card game-card" data-game-category="logica"><div class="game-cover" aria-hidden="true"><span>LÓGICA</span><strong>♠</strong><span>EXPERIMENTO WEB</span></div><div class="project-card__body"><div class="project-card__tags"><span class="tag">Lógica</span><span class="tag">JavaScript</span></div><h3 class="project-card__title">JoKenPo com cartas</h3><p class="project-card__description">Pedra, papel e tesoura com cartas inspiradas em Yu-Gi-Oh!, escolha do computador e placar. Projeto educacional da DIO.</p><p class="project-note">Demo web · possui sons e vídeo de fundo.</p><div class="project-card__actions"><a class="btn btn--outline" href="https://github.com/MarceloRodrigues1853/yugioh-jo-ken-po" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório de JoKenPo com cartas (nova aba)">Código ↗</a><a class="btn btn--primary" href="https://marcelorodrigues1853.github.io/yugioh-jo-ken-po/" target="_blank" rel="noopener noreferrer" aria-label="Jogar JoKenPo com cartas (nova aba)">Jogar ↗</a></div></div></article>
+<article class="project-card game-card" data-game-category="musica"><div class="project-card__image-container"><img src="assets/jogo-piano.png" alt="Piano Virtual com controles de áudio, treino guiado e teclado musical" class="project-card__image game-card__piano-image" width="900" height="1001" loading="lazy" decoding="async" /></div><div class="project-card__body"><div class="project-card__tags"><span class="tag">Música</span><span class="tag">JavaScript</span></div><h3 class="project-card__title">Simulador de Piano</h3><p class="project-card__description">Toque livremente ou ouça uma sequência e tente reproduzi-la no seu ritmo, com indicação da próxima tecla, feedback visual e resultado. Evolução de um desafio da DIO.</p><p class="project-note">Online · teclado ou clique · volume e silenciamento. Treino sem cronômetro.</p><div class="project-card__actions"><a class="btn btn--outline" href="https://github.com/MarceloRodrigues1853/simulador-piano" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório de Simulador de Piano (nova aba)">Código ↗</a><a class="btn btn--primary" href="https://marcelorodrigues1853.github.io/simulador-piano/" target="_blank" rel="noopener noreferrer" aria-label="Jogar Simulador de Piano (nova aba)">Tocar piano ↗</a></div></div></article>
+<article class="project-card game-card" data-game-category="logica"><div class="game-cover" aria-hidden="true"><span>LÓGICA · TERMINAL</span><strong>× ○</strong><span>PROJETO EM EQUIPE</span></div><div class="project-card__body"><div class="project-card__tags"><span class="tag">Lógica · Terminal</span><span class="tag">Java</span></div><h3 class="project-card__title">Jogo da Velha em Java</h3><p class="project-card__description">Projeto acadêmico em equipe na Ada: tabuleiro 3×3 no console, turnos, validação de jogadas e detecção de vitória ou empate.</p><p class="project-note">Java / terminal · requer JDK 21; sem versão web neste momento.</p><div class="project-card__actions"><a class="btn btn--outline" href="https://github.com/MarceloRodrigues1853/JogoDaVelha-Java" target="_blank" rel="noopener noreferrer" aria-label="Ver repositório de Jogo da Velha em Java (nova aba)">Código ↗</a><a class="btn btn--primary" href="https://github.com/MarceloRodrigues1853/JogoDaVelha-Java#como-executar" target="_blank" rel="noopener noreferrer" aria-label="Ver instruções de Jogo da Velha em Java (nova aba)">Como executar ↗</a></div></div></article></div><div class="games__footer"><p>Da lógica ao som: projetos pequenos também são espaço para experimentar e aprender.</p><a href="#xp" class="source-link">Voltar aos projetos profissionais ↑</a></div></div></section>
       <!-- Seção de Contato -->
       <section class="contact" id="contato">
         <div class="container">

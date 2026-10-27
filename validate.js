@@ -89,6 +89,31 @@ document.addEventListener("DOMContentLoaded", () => {
     window.matchMedia("(max-width: 768px)").addEventListener("change", closeMenu);
   }
 
+  // Filtros opcionais: sem JavaScript, todos os jogos permanecem visíveis.
+  const gameFilters = document.getElementById("gameFilters");
+  const gameCards = [...document.querySelectorAll("#gamesGrid [data-game-category]")];
+  const gameStatus = document.getElementById("gameFilterStatus");
+  if (gameFilters && gameCards.length && gameStatus) {
+    gameFilters.hidden = false;
+    gameStatus.hidden = false;
+    function filterGames(category) {
+      let count = 0;
+      gameCards.forEach(card => {
+        card.hidden = category !== "todos" && card.dataset.gameCategory !== category;
+        if (!card.hidden) count++;
+      });
+      gameFilters.querySelectorAll("button").forEach(button => {
+        button.setAttribute("aria-pressed", String(button.dataset.gameFilter === category));
+      });
+      gameStatus.textContent = count === 1 ? "1 experiência disponível." : count + " experiências disponíveis.";
+    }
+    gameFilters.addEventListener("click", event => {
+      const button = event.target.closest("button[data-game-filter]");
+      if (button && gameFilters.contains(button)) filterGames(button.dataset.gameFilter);
+    });
+    filterGames("todos");
+  }
+
   // Progresso apenas de navegação nesta sessão; nenhum conteúdo é bloqueado.
   const phaseLinks = [...document.querySelectorAll("[data-phase]")];
   const progress = document.getElementById("journeyProgress");

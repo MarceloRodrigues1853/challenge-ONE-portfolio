@@ -17,6 +17,8 @@ Explore em qualquer ordem. Os links levam às seções do site; não há conteú
 - **[03 / Formação](https://challenge-one-portfolio-nine.vercel.app/#formacao)** — cursos e certificações com suas fontes, incluindo Oracle Cloud Infrastructure (OCI) Foundations Associate.
 - **[04 / Contato](https://challenge-one-portfolio-nine.vercel.app/#contato)** — e-mail, LinkedIn e formulário.
 
+- **[05 / Jogos](https://challenge-one-portfolio-nine.vercel.app/#jogos)** — uma pausa com jogos de estudo e um experimento musical, com filtros opcionais.
+
 ## Por dentro da experiência
 
 <details>
@@ -119,3 +121,5 @@ No VS Code, abra `index.html` com **Open with Live Server**. Também é possíve
 O projeto começou no desafio de portfólio do programa Oracle Next Education (ONE), em parceria com a Alura, e evoluiu para esta experiência pessoal.
 
 [Documentação técnica e manutenção](DOCS.md) · [Fontes e limites de verificação do conteúdo](CONTENT_SOURCES.md)
+
+A evolução dos jogos é planejada em [GAMES.md](GAMES.md).
