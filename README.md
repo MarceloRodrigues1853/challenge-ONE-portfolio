@@ -1,6 +1,6 @@
 # Portfólio — Marcelo Rodrigues
 
-Código, lógica e experiências. Meu portfólio reúne projetos, trajetória e certificações em uma interface inspirada em jogos, com acesso direto às informações profissionais.
+Código, lógica e experiências. Meu portfólio reúne projetos, trajetória, certificações e uma área de jogos em uma interface inspirada em jogos, com acesso direto às informações profissionais.
 
 Gosto de conhecer e entender o porquê do que faço e como cada coisa funciona. Este portfólio acompanha meu caminho: aprender, experimentar e explicar as escolhas por trás das soluções.
 
@@ -16,8 +16,17 @@ Explore em qualquer ordem. Os links levam às seções do site; não há conteú
 - **[02 / Sobre mim](https://challenge-one-portfolio-nine.vercel.app/#sobremim)** — trajetória, tecnologias e interesses pessoais.
 - **[03 / Formação](https://challenge-one-portfolio-nine.vercel.app/#formacao)** — cursos e certificações com suas fontes, incluindo Oracle Cloud Infrastructure (OCI) Foundations Associate.
 - **[04 / Contato](https://challenge-one-portfolio-nine.vercel.app/#contato)** — e-mail, LinkedIn e formulário.
-
 - **[05 / Jogos](https://challenge-one-portfolio-nine.vercel.app/#jogos)** — uma pausa com jogos de estudo e um experimento musical, com filtros opcionais.
+
+## Uma pausa no código
+
+A área **Jogos** convida a experimentar projetos de estudo e aprender brincando. Filtre por lógica, reflexos ou música; sem JavaScript, todos os cards continuam disponíveis.
+
+[![Prévia da seção Jogos com filtros e cards para jogar](assets/portfolio-jogos-preview.png)](https://challenge-one-portfolio-nine.vercel.app/#jogos)
+
+**[Explorar os jogos](https://challenge-one-portfolio-nine.vercel.app/#jogos)** · **[Experimentar o Piano Virtual](https://marcelorodrigues1853.github.io/simulador-piano/)**
+
+No Piano, toque livremente ou ouça e reproduza uma sequência no seu ritmo, com indicação da próxima tecla, feedback visual e resultado. Os jogos web abrem em outra aba; o Jogo da Velha em Java ainda é um projeto de terminal.
 
 ## Por dentro da experiência
 
